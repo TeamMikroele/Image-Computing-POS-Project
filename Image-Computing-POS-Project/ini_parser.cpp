@@ -13,7 +13,7 @@ struct dir dir_img;
 
 bool check_dir(char * dir) {
 
-	if (dir == NULL or dir == NULL) {
+	if (dir == NULL) {
 
 		cout << "Cannot read a directory" << endl;
 		return false;
