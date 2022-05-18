@@ -2,11 +2,9 @@
 #include "ini_parser.h"
 
 using namespace std;
+void img_read()
+{
+ 
+	
 
-int main() {
-	
-	ini_read();
-	
-	system("PAUSE");
-	return 0;
 }
