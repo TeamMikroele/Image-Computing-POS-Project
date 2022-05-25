@@ -1,4 +1,9 @@
 #pragma once
 
-extern struct dir dir_img;
+struct dir {
+	char input [256];
+	char output [256];
+};
+struct dir dir_img;
+
 int ini_read();
