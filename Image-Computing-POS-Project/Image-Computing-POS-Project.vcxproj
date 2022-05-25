@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ini_parser.cpp" />
+    <ClCompile Include="MultithreadingExample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Initial_file.ini" />
