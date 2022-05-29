@@ -1,14 +1,11 @@
 #include <iostream>
 #include <windows.h>
 #include <sys/stat.h>
+#include "ini_parser.h"
 
 
 using namespace std;
 
-struct dir {
-	char input [256];
-	char output [256];
-};
 struct dir dir_img;
 
 bool check_dir(char * dir) {
