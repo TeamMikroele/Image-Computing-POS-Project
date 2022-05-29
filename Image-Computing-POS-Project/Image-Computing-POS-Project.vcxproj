@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Matikoks\Desktop\Studia\mgr_semetr1\POS\opencv\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Matikoks\Desktop\Studia\mgr_semetr1\POS\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\libs\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\libs\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
@@ -82,8 +82,8 @@
     <LibraryPath>C:\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\Matikoks\Desktop\Studia\mgr_semetr1\POS\opencv\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Matikoks\Desktop\Studia\mgr_semetr1\POS\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\libs\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\libs\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
