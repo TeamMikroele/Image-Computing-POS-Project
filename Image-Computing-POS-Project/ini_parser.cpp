@@ -6,6 +6,8 @@
 
 using namespace std;
 
+struct dir dir_img;
+
 bool check_dir(char * dir) {
 
 	if (dir == NULL) {
@@ -30,8 +32,6 @@ int ini_read() {
 
 	GetPrivateProfileString("input_folder", "input", NULL, dir_img.input, 256, "./Initial_file.ini");
 	GetPrivateProfileString("output_folder", "output", NULL, dir_img.output, 256, "./Initial_file.ini");
-
-	strcat_s(dir_img.input, "*.png");
 
 	if (!check_dir(dir_img.input) || !check_dir(dir_img.output)) {
 		return 0;

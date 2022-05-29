@@ -1,4 +1,3 @@
-
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/core/utility.hpp"
@@ -10,20 +9,18 @@
 using namespace std;
 using namespace cv;
 
-const int w = 500;
-int levels = 3;
-
-vector<vector<Point> > contours;
-vector<Vec4i> hierarchy;
-
 vector<Mat> Image;
 
 void img_read()
 {
     vector<String> filenames;
-    glob(dir_img.input, filenames);
-    Image.resize(filenames.size());
 
+	strcat_s(dir_img.input, "*.png");
+    glob(dir_img.input, filenames);
+
+    Image.resize(filenames.size());
+	if (!filenames.size())
+		cout << "error: there is no .png file in " << dir_img.input << endl;
 
     for (int i = 0; i < filenames.size(); ++i)
     {

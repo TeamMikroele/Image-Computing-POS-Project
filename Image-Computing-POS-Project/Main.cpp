@@ -11,4 +11,5 @@ int main() {
 	img_write();
 	system("PAUSE");
 	return 0;
+
 }
