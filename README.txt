@@ -3,7 +3,7 @@ eg. C:\Users\Micha\Image-Computing-POS-Project\libs
 
 link: https://github.com/opencv/opencv/releases/tag/4.2.0
 
-Be aware to change enviromental variables in system properties->advanced->Enviroment Variables..
+Be aware to change enviromental variables on Windows in system properties->advanced->Enviroment Variables..
 Then in system variables window edit "Path" add global directory to <repo folder>\opencv\build\x64\vc15\bin 
 eg. C:\Users\Micha\Image-Computing-POS-Project\libs\opencv\build\x64\vc15\bin
 
