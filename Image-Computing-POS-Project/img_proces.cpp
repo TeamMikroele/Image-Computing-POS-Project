@@ -13,32 +13,39 @@ vector<Mat> Image;
 
 void img_read()
 {
-    vector<String> filenames;
+	vector<String> filenames;
 
 	strcat_s(dir_img.input, "*.png");
-    glob(dir_img.input, filenames);
+	glob(dir_img.input, filenames);
 
-    Image.resize(filenames.size());
+	Image.resize(filenames.size());
 	if (!filenames.size())
 		cout << "error: there is no .png file in " << dir_img.input << endl;
-
-    for (int i = 0; i < filenames.size(); ++i)
-    {
-        Image[i] = imread(filenames[i]);
-    }
 	
+	for (int i = 0; i < filenames.size(); ++i)
+	{
+		Image[i] = imread(filenames[i]);
+	}
+
 
 }
 
 void img_write()
 {
-    vector<String> filenames;
-    glob(dir_img.input, filenames);
+	vector<String> filenames;
+	glob(dir_img.input, filenames);
 
-    for (int i = 0; i < filenames.size(); ++i)
-    {
-        string fileName = dir_img.output + to_string(i) + ".png";
-        imwrite(fileName, Image[i]);
-        
-    }
+	for (int i = 0; i < filenames.size(); ++i)
+	{
+		string fileName = dir_img.output + to_string(i) + ".png";
+		imwrite(fileName, Image[i]);
+
+	}
+}
+
+Mat edge_detecting(Mat Img) {
+	Mat tmp;
+	cvtColor(Img, tmp, COLOR_BGR2GRAY, 0);
+	Laplacian(tmp, Img, CV_16S, 5, 1, 0, 4);
+	return Img;
 }
