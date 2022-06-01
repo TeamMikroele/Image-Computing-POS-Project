@@ -21,7 +21,7 @@ void img_read()
 	Image.resize(filenames.size());
 	if (!filenames.size())
 		cout << "error: there is no .png file in " << dir_img.input << endl;
-	
+
 	for (int i = 0; i < filenames.size(); ++i)
 	{
 		Image[i] = imread(filenames[i]);
