@@ -24,6 +24,9 @@
     <ClCompile Include="img_proces.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="multithread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Initial_file.ini">
@@ -35,6 +38,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="img_proces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multithread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
