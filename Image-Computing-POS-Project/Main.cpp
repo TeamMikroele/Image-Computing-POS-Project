@@ -6,8 +6,6 @@
 
 using namespace std;
 
-bool finish = false;
-
 auto processors = std::thread::hardware_concurrency();
 
 mutex mymutex;
@@ -16,13 +14,9 @@ thread* worker = new thread[processors];
 void Work(int n)
 {
 	using namespace literals::chrono_literals;
-
-	while (!finish)
-	{
-		//mymutex.lock(); //do lockowania zapisu na dysk
-		Image[n] = edge_detecting(Image[n]);
-		//mymutex.unlock();
-	}
+	//mymutex.lock(); //do lockowania zapisu na dysk
+	edge_detecting(n);
+	//mymutex.unlock();
 
 }
 
@@ -33,7 +27,8 @@ int main() {
 	
 	
 	ini_read();
-	img_read();
+	read_input_folder_info();
+	for (int i = 0; i < size(Image); i++)img_read(i);
 	int obrazki = size(Image) - 1;
 
 	int iteracje = size(Image) / processors;
@@ -53,8 +48,6 @@ int main() {
 			obrazki--;
 		}
 
-		finish = true;
-
 		for (int j = 0; j < processors; j++)
 		{
 			worker[j].join();
@@ -65,7 +58,7 @@ int main() {
 
 	//for (int i =0; i<size(Image); i++) Image[i] = edge_detecting(Image[i]);
 
-	img_write();
+	for (int i = 0; i < size(Image); i++)img_write(i);
 	
 	delete[] worker;
 	system("PAUSE");
