@@ -10,7 +10,6 @@ using namespace std;
 
 extern vector<Mat> Image;
 
-void read_input_folder_info();
-void img_read(int);
-void img_write(int);
-void edge_detecting(int);
+void img_read();
+void img_write();
+Mat edge_detecting(Mat);
