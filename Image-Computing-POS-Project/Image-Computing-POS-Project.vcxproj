@@ -141,6 +141,7 @@
     <ClCompile Include="img_proces.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ini_parser.cpp" />
+    <ClCompile Include="multithread.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Initial_file.ini" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="img_proces.h" />
     <ClInclude Include="ini_parser.h" />
+    <ClInclude Include="multithread.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
