@@ -2,6 +2,7 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/core/utility.hpp"
 #include "opencv2/core/matx.hpp"
+#include <math.h>
 #include <iostream>
 #include "ini_parser.h"
 
@@ -9,32 +10,42 @@ using namespace std;
 using namespace cv;
 
 vector<Mat> Image;
-vector<String> filenames;
 
-void read_input_folder_info() {
+void img_read()
+{
+	vector<String> filenames;
 
 	strcat_s(dir_img.input, "*.png");
 	glob(dir_img.input, filenames);
-	Image.resize(filenames.size());
 
+	Image.resize(filenames.size());
 	if (!filenames.size())
 		cout << "error: there is no .png file in " << dir_img.input << endl;
+	
+	for (int i = 0; i < filenames.size(); ++i)
+	{
+		Image[i] = imread(filenames[i]);
+	}
+
+
 }
 
-void img_read(int img_index) {
+void img_write()
+{
+	vector<String> filenames;
+	glob(dir_img.input, filenames);
 
-	Image[img_index] = imread(filenames[img_index]);
+	for (int i = 0; i < filenames.size(); ++i)
+	{
+		string fileName = dir_img.output + to_string(i) + ".png";
+		imwrite(fileName, Image[i]);
+
+	}
 }
 
-void img_write(int img_index) {
-
-	string fileName = dir_img.output + to_string(img_index) + ".png";
-	imwrite(fileName, Image[img_index]);
-}
-
-void edge_detecting(int img_index) {
-
+Mat edge_detecting(Mat Img) {
 	Mat tmp;
-	cvtColor(Image[img_index], tmp, COLOR_BGR2GRAY, 0);
-	Laplacian(tmp, Image[img_index], CV_16S, 5, 1, 0, 4);
+	cvtColor(Img, tmp, COLOR_BGR2GRAY, 0);
+	Laplacian(tmp, Img, CV_16S, 5, 1, 0, 4);
+	return Img;
 }
