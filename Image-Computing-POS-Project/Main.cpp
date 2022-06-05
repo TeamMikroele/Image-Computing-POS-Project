@@ -5,9 +5,14 @@
 
 using namespace std;
 
-int main() {	
+int main() {
+
 	ini_read();
+	read_input_folder_info();
 	multithread();
+	thumbnails_matrix("matrix_input", ImageColor);
+	thumbnails_matrix("matrix_processed", Image);
+
 	system("PAUSE");
 	return 0;
 }

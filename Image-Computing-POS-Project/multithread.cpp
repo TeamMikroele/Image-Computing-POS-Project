@@ -23,8 +23,6 @@ void multithread() {
 
 	cout << "Number of threads: " << processors << endl;
 
-	read_input_folder_info();
-
 	int images = size(Image) - 1;
 
 	int iterations = size(Image) / processors;
