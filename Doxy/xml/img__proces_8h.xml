@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="img__proces_8h" kind="file" language="C++">
+    <compoundname>img_proces.h</compoundname>
+    <includes local="yes">opencv2/imgproc.hpp</includes>
+    <includes local="yes">opencv2/highgui.hpp</includes>
+    <includes local="yes">opencv2/core/utility.hpp</includes>
+    <includes local="yes">opencv2/core/matx.hpp</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_main_8cpp" local="yes">Image-Computing-POS-Project/Main.cpp</includedby>
+    <includedby refid="multithread_8cpp" local="yes">Image-Computing-POS-Project/multithread.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Image-Computing-POS-Project/img_proces.h</label>
+        <link refid="img__proces_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>opencv2/core/matx.hpp</label>
+      </node>
+      <node id="4">
+        <label>opencv2/core/utility.hpp</label>
+      </node>
+      <node id="3">
+        <label>opencv2/highgui.hpp</label>
+      </node>
+      <node id="2">
+        <label>opencv2/imgproc.hpp</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Image-Computing-POS-Project/Main.cpp</label>
+        <link refid="_main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Image-Computing-POS-Project/img_proces.h</label>
+        <link refid="img__proces_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Image-Computing-POS-Project/multithread.cpp</label>
+        <link refid="multithread_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="img__proces_8h_1a2147c4bd2997d8faf67e2152bda096e0" prot="public" static="no" mutable="no">
+        <type>vector&lt; Mat &gt;</type>
+        <definition>vector&lt;Mat&gt; Image</definition>
+        <argsstring></argsstring>
+        <name>Image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vector of images to process </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="14" column="15" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="24" bodyend="-1" declfile="Image-Computing-POS-Project/img_proces.h" declline="14" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="img__proces_8h_1a89c83fb2ccc008610c5aeb92e654b32b" prot="public" static="no" mutable="no">
+        <type>vector&lt; Mat &gt;</type>
+        <definition>vector&lt;Mat&gt; ImageColor</definition>
+        <argsstring></argsstring>
+        <name>ImageColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vector of loaded coloured images </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="18" column="15" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="28" bodyend="-1" declfile="Image-Computing-POS-Project/img_proces.h" declline="18" declcolumn="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="img__proces_8h_1aa2dfd97634c85a8aa41a3c43f7a42ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void read_input_folder_info</definition>
+        <argsstring>()</argsstring>
+        <name>read_input_folder_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function to read info of images to process </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>function to read info of images to process</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="23" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="34" bodyend="45" declfile="Image-Computing-POS-Project/img_proces.h" declline="23" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8h_1a1e944fd8ceb274ba6c0345c13a7a3a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void img_read</definition>
+        <argsstring>(int)</argsstring>
+        <name>img_read</name>
+        <param>
+          <type>int</type>
+          <declname>img_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reads one image from source folder </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>reads one image from source folder <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an index of processed image</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="27" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="47" bodyend="54" declfile="Image-Computing-POS-Project/img_proces.h" declline="27" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8h_1a4664f44d6c1e49cade69d635d26324ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void img_write</definition>
+        <argsstring>(int)</argsstring>
+        <name>img_write</name>
+        <param>
+          <type>int</type>
+          <declname>img_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>writes one processed image to destination folder </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>writes one processed image to destination folder <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an index of processed image</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="31" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="56" bodyend="63" declfile="Image-Computing-POS-Project/img_proces.h" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8h_1ac4a2fc3fc930683ef71496be869617fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void edge_detecting</definition>
+        <argsstring>(int)</argsstring>
+        <name>edge_detecting</name>
+        <param>
+          <type>int</type>
+          <declname>img_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>edge detecting function based on laplacian detection, processes singular image </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>edge detecting function based on laplacian detection, processes singular image <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an index of processed image</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="35" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="65" bodyend="73" declfile="Image-Computing-POS-Project/img_proces.h" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8h_1a3ebbe08f7df91e3af1866b8f195f10e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void thumbnails_matrix</definition>
+        <argsstring>(string, vector&lt; Mat &gt;)</argsstring>
+        <name>thumbnails_matrix</name>
+        <param>
+          <type>string</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>vector&lt; Mat &gt;</type>
+          <declname>ImagesToConcatanate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>creates matrix of thumbnails of given images </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>creates matrix of thumbnails of given images <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the name of output thumbnail matrix file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ImagesToConcatanate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a vector of images to merge</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="39" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="75" bodyend="111" declfile="Image-Computing-POS-Project/img_proces.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/imgproc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/highgui.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/core/utility.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/core/matx.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">cv;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;Mat&gt;<sp/><ref refid="img__proces_8h_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>vector&lt;Mat&gt;<sp/><ref refid="img__proces_8h_1a89c83fb2ccc008610c5aeb92e654b32b" kindref="member">ImageColor</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8h_1aa2dfd97634c85a8aa41a3c43f7a42ff8" kindref="member">read_input_folder_info</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8h_1a1e944fd8ceb274ba6c0345c13a7a3a2d" kindref="member">img_read</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8h_1a4664f44d6c1e49cade69d635d26324ff" kindref="member">img_write</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8h_1ac4a2fc3fc930683ef71496be869617fa" kindref="member">edge_detecting</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8h_1a3ebbe08f7df91e3af1866b8f195f10e2" kindref="member">thumbnails_matrix</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/>vector&lt;Mat&gt;);</highlight></codeline>
+    </programlisting>
+    <location file="Image-Computing-POS-Project/img_proces.h"/>
+  </compounddef>
+</doxygen>

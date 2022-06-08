@@ -1,0 +1,59 @@
+\hypertarget{ini__parser_8cpp}{}\doxysection{Image-\/\+Computing-\/\+POS-\/\+Project/ini\+\_\+parser.cpp File Reference}
+\label{ini__parser_8cpp}\index{Image-\/Computing-\/POS-\/Project/ini\_parser.cpp@{Image-\/Computing-\/POS-\/Project/ini\_parser.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ini\+\_\+parser.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\+\_\+dir}} (char $\ast$\mbox{\hyperlink{structdir}{dir}})
+\item 
+int \mbox{\hyperlink{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}{ini\+\_\+read}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdir}{dir}} \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\+\_\+img}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}\label{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}} 
+\index{ini\_parser.cpp@{ini\_parser.cpp}!check\_dir@{check\_dir}}
+\index{check\_dir@{check\_dir}!ini\_parser.cpp@{ini\_parser.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_dir()}{check\_dir()}}
+{\footnotesize\ttfamily bool check\+\_\+dir (\begin{DoxyParamCaption}\item[{char $\ast$}]{dir }\end{DoxyParamCaption})}
+
+checks if given directory in $\ast$.ini file exists 
+\begin{DoxyParams}{Parameters}
+{\em dir} & is an array of chars which contains directory\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
+
+\mbox{\Hypertarget{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}\label{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}} 
+\index{ini\_parser.cpp@{ini\_parser.cpp}!ini\_read@{ini\_read}}
+\index{ini\_read@{ini\_read}!ini\_parser.cpp@{ini\_parser.cpp}}
+\doxysubsubsection{\texorpdfstring{ini\_read()}{ini\_read()}}
+{\footnotesize\ttfamily int ini\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+reads initialization file reads initialization file
+
+Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}\label{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}} 
+\index{ini\_parser.cpp@{ini\_parser.cpp}!dir\_img@{dir\_img}}
+\index{dir\_img@{dir\_img}!ini\_parser.cpp@{ini\_parser.cpp}}
+\doxysubsubsection{\texorpdfstring{dir\_img}{dir\_img}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdir}{dir}} dir\+\_\+img}
+
+global variable of directories of input and output dir 
+
+Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
+

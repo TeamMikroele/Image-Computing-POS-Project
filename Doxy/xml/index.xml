@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.4" xml:lang="en-US">
+  <compound refid="structdir" kind="struct"><name>dir</name>
+    <member refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kind="variable"><name>input</name></member>
+    <member refid="structdir_1adc4ecf23b1215d4e65058f2174443355" kind="variable"><name>output</name></member>
+  </compound>
+  <compound refid="namespacecv" kind="namespace"><name>cv</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="img__proces_8cpp" kind="file"><name>img_proces.cpp</name>
+    <member refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" kind="variable"><name>ROWS</name></member>
+    <member refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" kind="variable"><name>COLS</name></member>
+    <member refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kind="variable"><name>Image</name></member>
+    <member refid="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" kind="variable"><name>ImageColor</name></member>
+    <member refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kind="variable"><name>filenames</name></member>
+    <member refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" kind="function"><name>read_input_folder_info</name></member>
+    <member refid="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" kind="function"><name>img_read</name></member>
+    <member refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" kind="function"><name>img_write</name></member>
+    <member refid="img__proces_8cpp_1a460b50e10053ab4e957b16eb60df2e3e" kind="function"><name>edge_detecting</name></member>
+    <member refid="img__proces_8cpp_1ae74c141a050d22ccda7686c4ac762459" kind="function"><name>thumbnails_matrix</name></member>
+  </compound>
+  <compound refid="img__proces_8h" kind="file"><name>img_proces.h</name>
+    <member refid="img__proces_8h_1a2147c4bd2997d8faf67e2152bda096e0" kind="variable"><name>Image</name></member>
+    <member refid="img__proces_8h_1a89c83fb2ccc008610c5aeb92e654b32b" kind="variable"><name>ImageColor</name></member>
+    <member refid="img__proces_8h_1aa2dfd97634c85a8aa41a3c43f7a42ff8" kind="function"><name>read_input_folder_info</name></member>
+    <member refid="img__proces_8h_1a1e944fd8ceb274ba6c0345c13a7a3a2d" kind="function"><name>img_read</name></member>
+    <member refid="img__proces_8h_1a4664f44d6c1e49cade69d635d26324ff" kind="function"><name>img_write</name></member>
+    <member refid="img__proces_8h_1ac4a2fc3fc930683ef71496be869617fa" kind="function"><name>edge_detecting</name></member>
+    <member refid="img__proces_8h_1a3ebbe08f7df91e3af1866b8f195f10e2" kind="function"><name>thumbnails_matrix</name></member>
+  </compound>
+  <compound refid="ini__parser_8cpp" kind="file"><name>ini_parser.cpp</name>
+    <member refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kind="variable"><name>dir_img</name></member>
+    <member refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kind="function"><name>check_dir</name></member>
+    <member refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" kind="function"><name>ini_read</name></member>
+  </compound>
+  <compound refid="ini__parser_8h" kind="file"><name>ini_parser.h</name>
+    <member refid="ini__parser_8h_1a74ec717e71ce698e43164095d548ef05" kind="variable"><name>dir_img</name></member>
+    <member refid="ini__parser_8h_1ad888b7d22149211c49a67fafe27442fa" kind="function"><name>ini_read</name></member>
+  </compound>
+  <compound refid="_main_8cpp" kind="file"><name>Main.cpp</name>
+    <member refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="multithread_8cpp" kind="file"><name>multithread.cpp</name>
+    <member refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kind="variable"><name>processors</name></member>
+    <member refid="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" kind="variable"><name>mymutex</name></member>
+    <member refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" kind="variable"><name>worker</name></member>
+    <member refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" kind="function"><name>Work</name></member>
+    <member refid="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" kind="function"><name>multithread</name></member>
+  </compound>
+  <compound refid="multithread_8h" kind="file"><name>multithread.h</name>
+    <member refid="multithread_8h_1a9a8cc02a6821d411e7d417edabcf1e95" kind="function"><name>multithread</name></member>
+  </compound>
+  <compound refid="dir_860d7be8ff66059d1106aee354f6f4db" kind="dir"><name>Image-Computing-POS-Project</name>
+  </compound>
+</doxygenindex>

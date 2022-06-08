@@ -1,0 +1,163 @@
+\hypertarget{img__proces_8cpp}{}\doxysection{Image-\/\+Computing-\/\+POS-\/\+Project/img\+\_\+proces.cpp File Reference}
+\label{img__proces_8cpp}\index{Image-\/Computing-\/POS-\/Project/img\_proces.cpp@{Image-\/Computing-\/POS-\/Project/img\_proces.cpp}}
+{\ttfamily \#include \char`\"{}opencv2/imgproc.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/highgui.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/core/utility.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/core/matx.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}string\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ini\+\_\+parser.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{img__proces_8cpp_aa2dfd97634c85a8aa41a3c43f7a42ff8}{read\+\_\+input\+\_\+folder\+\_\+info}} ()
+\item 
+void \mbox{\hyperlink{img__proces_8cpp_ad9f454c15364682bb607240fdac83db7}{img\+\_\+read}} (int img\+\_\+index)
+\item 
+void \mbox{\hyperlink{img__proces_8cpp_a63417198c529b960ec8a21eaa9d256c3}{img\+\_\+write}} (int img\+\_\+index)
+\item 
+void \mbox{\hyperlink{img__proces_8cpp_a460b50e10053ab4e957b16eb60df2e3e}{edge\+\_\+detecting}} (int img\+\_\+index)
+\item 
+void \mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{thumbnails\+\_\+matrix}} (string file\+\_\+name, vector$<$ Mat $>$ Images\+To\+Concatanate)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}} = 125
+\item 
+const int \mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}} = 125
+\item 
+vector$<$ Mat $>$ \mbox{\hyperlink{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}{Image}}
+\item 
+vector$<$ Mat $>$ \mbox{\hyperlink{img__proces_8cpp_a89c83fb2ccc008610c5aeb92e654b32b}{Image\+Color}}
+\item 
+vector$<$ String $>$ \mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{img__proces_8cpp_a460b50e10053ab4e957b16eb60df2e3e}\label{img__proces_8cpp_a460b50e10053ab4e957b16eb60df2e3e}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!edge\_detecting@{edge\_detecting}}
+\index{edge\_detecting@{edge\_detecting}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{edge\_detecting()}{edge\_detecting()}}
+{\footnotesize\ttfamily void edge\+\_\+detecting (\begin{DoxyParamCaption}\item[{int}]{img\+\_\+index }\end{DoxyParamCaption})}
+
+edge detecting function based on laplacian detection, processes singular image edge detecting function based on laplacian detection, processes singular image 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+index} & is an index of processed image\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_ad9f454c15364682bb607240fdac83db7}\label{img__proces_8cpp_ad9f454c15364682bb607240fdac83db7}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!img\_read@{img\_read}}
+\index{img\_read@{img\_read}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{img\_read()}{img\_read()}}
+{\footnotesize\ttfamily void img\+\_\+read (\begin{DoxyParamCaption}\item[{int}]{img\+\_\+index }\end{DoxyParamCaption})}
+
+reads one image from source folder reads one image from source folder 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+index} & is an index of processed image\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_a63417198c529b960ec8a21eaa9d256c3}\label{img__proces_8cpp_a63417198c529b960ec8a21eaa9d256c3}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!img\_write@{img\_write}}
+\index{img\_write@{img\_write}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{img\_write()}{img\_write()}}
+{\footnotesize\ttfamily void img\+\_\+write (\begin{DoxyParamCaption}\item[{int}]{img\+\_\+index }\end{DoxyParamCaption})}
+
+writes one processed image to destination folder writes one processed image to destination folder 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+index} & is an index of processed image\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_aa2dfd97634c85a8aa41a3c43f7a42ff8}\label{img__proces_8cpp_aa2dfd97634c85a8aa41a3c43f7a42ff8}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!read\_input\_folder\_info@{read\_input\_folder\_info}}
+\index{read\_input\_folder\_info@{read\_input\_folder\_info}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_input\_folder\_info()}{read\_input\_folder\_info()}}
+{\footnotesize\ttfamily void read\+\_\+input\+\_\+folder\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function to read info of images to process function to read info of images to process
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}\label{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!thumbnails\_matrix@{thumbnails\_matrix}}
+\index{thumbnails\_matrix@{thumbnails\_matrix}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{thumbnails\_matrix()}{thumbnails\_matrix()}}
+{\footnotesize\ttfamily void thumbnails\+\_\+matrix (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name,  }\item[{vector$<$ Mat $>$}]{Images\+To\+Concatanate }\end{DoxyParamCaption})}
+
+creates matrix of thumbnails of given images creates matrix of thumbnails of given images 
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & is the name of output thumbnail matrix file \\
+\hline
+{\em Images\+To\+Concatanate} & is a vector of images to merge\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}\label{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!COLS@{COLS}}
+\index{COLS@{COLS}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily const int COLS = 125}
+
+variable which defines size of cropped images 
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}\label{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!filenames@{filenames}}
+\index{filenames@{filenames}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{filenames}{filenames}}
+{\footnotesize\ttfamily vector$<$String$>$ filenames}
+
+vector of loaded images names 
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}\label{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!Image@{Image}}
+\index{Image@{Image}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{Image}{Image}}
+{\footnotesize\ttfamily vector$<$Mat$>$ Image}
+
+vector of images to process 
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_a89c83fb2ccc008610c5aeb92e654b32b}\label{img__proces_8cpp_a89c83fb2ccc008610c5aeb92e654b32b}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!ImageColor@{ImageColor}}
+\index{ImageColor@{ImageColor}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{ImageColor}{ImageColor}}
+{\footnotesize\ttfamily vector$<$Mat$>$ Image\+Color}
+
+vector of loaded coloured images 
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+
+\mbox{\Hypertarget{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}\label{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}} 
+\index{img\_proces.cpp@{img\_proces.cpp}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!img\_proces.cpp@{img\_proces.cpp}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily const int ROWS = 125}
+
+variable which defines size of cropped images 
+
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+

@@ -1,0 +1,85 @@
+\hypertarget{multithread_8cpp}{}\doxysection{Image-\/\+Computing-\/\+POS-\/\+Project/multithread.cpp File Reference}
+\label{multithread_8cpp}\index{Image-\/Computing-\/POS-\/Project/multithread.cpp@{Image-\/Computing-\/POS-\/Project/multithread.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include \char`\"{}img\+\_\+proces.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{multithread_8cpp_a5cfb4319272a7987ecf533116fb3ba7b}{Work}} (int n)
+\item 
+void \mbox{\hyperlink{multithread_8cpp_a9a8cc02a6821d411e7d417edabcf1e95}{multithread}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{multithread_8cpp_af76c77153a5f4c39211f8a0965413fe0}{processors}} = std\+::thread\+::hardware\+\_\+concurrency()
+\item 
+mutex \mbox{\hyperlink{multithread_8cpp_a4aac70c29fbd4e257a43b3ae2b3a4250}{mymutex}}
+\item 
+thread $\ast$ \mbox{\hyperlink{multithread_8cpp_ad71f043e363288f24e89652770ec1eb2}{worker}} = new thread\mbox{[}\mbox{\hyperlink{multithread_8cpp_af76c77153a5f4c39211f8a0965413fe0}{processors}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{multithread_8cpp_a9a8cc02a6821d411e7d417edabcf1e95}\label{multithread_8cpp_a9a8cc02a6821d411e7d417edabcf1e95}} 
+\index{multithread.cpp@{multithread.cpp}!multithread@{multithread}}
+\index{multithread@{multithread}!multithread.cpp@{multithread.cpp}}
+\doxysubsubsection{\texorpdfstring{multithread()}{multithread()}}
+{\footnotesize\ttfamily void multithread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function enables multithread processing. At first the number of iterations is counted, given the number of images to process. Whole processing work is divided by the number of available threads to run. Function starts each thread and as it finished its work, realeases a thread in a for() loop. This function enables multithread processing. At first the number of iterations is counted, given the number of images to process. Whole processing work is divided by the number of available threads to run. Function starts each thread and as it finished its work, realeases a thread in a for() loop.
+
+delete an array of threads
+
+Definition at line \mbox{\hyperlink{multithread_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{multithread_8cpp_source}{multithread.\+cpp}}.
+
+\mbox{\Hypertarget{multithread_8cpp_a5cfb4319272a7987ecf533116fb3ba7b}\label{multithread_8cpp_a5cfb4319272a7987ecf533116fb3ba7b}} 
+\index{multithread.cpp@{multithread.cpp}!Work@{Work}}
+\index{Work@{Work}!multithread.cpp@{multithread.cpp}}
+\doxysubsubsection{\texorpdfstring{Work()}{Work()}}
+{\footnotesize\ttfamily void Work (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+thread routine. An image is loaded, processed and then a mutex locks to make sure only one image is written to hdd at a time. 
+\begin{DoxyParams}{Parameters}
+{\em n} & is a number of current processed image from images vector\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{multithread_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{multithread_8cpp_source}{multithread.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{multithread_8cpp_a4aac70c29fbd4e257a43b3ae2b3a4250}\label{multithread_8cpp_a4aac70c29fbd4e257a43b3ae2b3a4250}} 
+\index{multithread.cpp@{multithread.cpp}!mymutex@{mymutex}}
+\index{mymutex@{mymutex}!multithread.cpp@{multithread.cpp}}
+\doxysubsubsection{\texorpdfstring{mymutex}{mymutex}}
+{\footnotesize\ttfamily mutex mymutex}
+
+declaration of mutex 
+
+Definition at line \mbox{\hyperlink{multithread_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{multithread_8cpp_source}{multithread.\+cpp}}.
+
+\mbox{\Hypertarget{multithread_8cpp_af76c77153a5f4c39211f8a0965413fe0}\label{multithread_8cpp_af76c77153a5f4c39211f8a0965413fe0}} 
+\index{multithread.cpp@{multithread.cpp}!processors@{processors}}
+\index{processors@{processors}!multithread.cpp@{multithread.cpp}}
+\doxysubsubsection{\texorpdfstring{processors}{processors}}
+{\footnotesize\ttfamily auto processors = std\+::thread\+::hardware\+\_\+concurrency()}
+
+variable which defines number of available threads to run our process 
+
+Definition at line \mbox{\hyperlink{multithread_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{multithread_8cpp_source}{multithread.\+cpp}}.
+
+\mbox{\Hypertarget{multithread_8cpp_ad71f043e363288f24e89652770ec1eb2}\label{multithread_8cpp_ad71f043e363288f24e89652770ec1eb2}} 
+\index{multithread.cpp@{multithread.cpp}!worker@{worker}}
+\index{worker@{worker}!multithread.cpp@{multithread.cpp}}
+\doxysubsubsection{\texorpdfstring{worker}{worker}}
+{\footnotesize\ttfamily thread$\ast$ worker = new thread\mbox{[}\mbox{\hyperlink{multithread_8cpp_af76c77153a5f4c39211f8a0965413fe0}{processors}}\mbox{]}}
+
+creating an array of threads to process images 
+
+Definition at line \mbox{\hyperlink{multithread_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{multithread_8cpp_source}{multithread.\+cpp}}.
+

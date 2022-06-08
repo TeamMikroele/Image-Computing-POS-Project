@@ -6,18 +6,35 @@
 #include "string"
 #include "ini_parser.h"
 
+/**
+ * variable which defines size of cropped images
+ */
 const int ROWS = 125;
+/**
+ * variable which defines size of cropped images
+ */
 const int COLS = 125;
 
 using namespace std;
 using namespace cv;
 
+/**
+ * vector of images to process
+ */
 vector<Mat> Image;
+/**
+ * vector of loaded coloured images
+ */
 vector<Mat> ImageColor;
+/**
+ * vector of loaded images names
+ */
 vector<String> filenames;
 
 void read_input_folder_info() {
-
+/**
+ * function to read info of images to process
+ */
 	strcat_s(dir_img.input, "*.png");
 	glob(dir_img.input, filenames);
 	Image.resize(filenames.size());
@@ -28,25 +45,39 @@ void read_input_folder_info() {
 }
 
 void img_read(int img_index) {
-
+/**
+* reads one image from source folder
+* @param img_index is an index of processed image
+*/
 	Image[img_index] = imread(filenames[img_index]);
 	ImageColor[img_index] = imread(filenames[img_index], IMREAD_GRAYSCALE);
 }
 
 void img_write(int img_index) {
-
+/**
+* writes one processed image to destination folder
+* @param img_index is an index of processed image
+*/
 	string fileName = dir_img.output + to_string(img_index) + ".png";
 	imwrite(fileName, Image[img_index]);
 }
 
 void edge_detecting(int img_index) {
-
+/**
+* edge detecting function based on laplacian detection, processes singular image
+* @param img_index is an index of processed image
+*/
 	Mat tmp;
 	cvtColor(Image[img_index], tmp, COLOR_BGR2GRAY, 0);
 	Laplacian(tmp, Image[img_index], CV_16S, 5, 1, 0, 4);
 }
 
 void thumbnails_matrix(string file_name, vector<Mat> ImagesToConcatanate){
+/**
+* creates matrix of thumbnails of given images
+* @param file_name is the name of output thumbnail matrix file
+* @param ImagesToConcatanate is a vector of images to merge
+*/
 	vector<Mat> CroppedImages;
 	CroppedImages.resize(filenames.size());
 	for (int img_index = 0; img_index < filenames.size(); img_index++) {

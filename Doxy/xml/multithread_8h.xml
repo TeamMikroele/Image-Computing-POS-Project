@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="multithread_8h" kind="file" language="C++">
+    <compoundname>multithread.h</compoundname>
+    <includedby refid="_main_8cpp" local="yes">Image-Computing-POS-Project/Main.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>Image-Computing-POS-Project/Main.cpp</label>
+        <link refid="_main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Image-Computing-POS-Project/multithread.h</label>
+        <link refid="multithread_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="multithread_8h_1a9a8cc02a6821d411e7d417edabcf1e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void multithread</definition>
+        <argsstring>()</argsstring>
+        <name>multithread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function enables multithread processing. At first the number of iterations is counted, given the number of images to process. Whole processing work is divided by the number of available threads to run. Function starts each thread and as it finished its work, realeases a thread in a for() loop. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>This function enables multithread processing. At first the number of iterations is counted, given the number of images to process. Whole processing work is divided by the number of available threads to run. Function starts each thread and as it finished its work, realeases a thread in a for() loop.</para>
+<para>delete an array of threads</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/multithread.h" line="8" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="37" bodyend="73" declfile="Image-Computing-POS-Project/multithread.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="multithread_8h_1a9a8cc02a6821d411e7d417edabcf1e95" kindref="member">multithread</ref>();</highlight></codeline>
+    </programlisting>
+    <location file="Image-Computing-POS-Project/multithread.h"/>
+  </compounddef>
+</doxygen>

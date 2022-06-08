@@ -6,7 +6,10 @@
 using namespace std;
 
 int main() {
-
+/**
+* program main function
+* calls every needed function
+*/
 	ini_read();
 	read_input_folder_info();
 	multithread();
