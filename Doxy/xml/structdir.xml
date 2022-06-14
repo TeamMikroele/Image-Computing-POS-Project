@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structdir" kind="struct" language="C++" prot="public">
+    <compoundname>dir</compoundname>
+    <includes refid="ini__parser_8h" local="no">ini_parser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdir_1ab5504a60475dcc29bbb3dbc30185b215" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dir::input[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>input</name>
+        <qualifiedname>dir::input</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/ini_parser.h" line="6" column="6" bodyfile="Image-Computing-POS-Project/ini_parser.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdir_1adc4ecf23b1215d4e65058f2174443355" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dir::output[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>output</name>
+        <qualifiedname>dir::output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/ini_parser.h" line="7" column="6" bodyfile="Image-Computing-POS-Project/ini_parser.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>global variable of directories of input and output dir </para>
+    </detaileddescription>
+    <location file="Image-Computing-POS-Project/ini_parser.h" line="5" column="1" bodyfile="Image-Computing-POS-Project/ini_parser.h" bodystart="5" bodyend="8"/>
+    <listofallmembers>
+      <member refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" prot="public" virt="non-virtual"><scope>dir</scope><name>input</name></member>
+      <member refid="structdir_1adc4ecf23b1215d4e65058f2174443355" prot="public" virt="non-virtual"><scope>dir</scope><name>output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

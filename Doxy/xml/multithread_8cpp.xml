@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="multithread_8cpp" kind="file" language="C++">
+    <compoundname>multithread.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">mutex</includes>
+    <includes refid="img__proces_8h" local="yes">img_proces.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>img_proces.h</label>
+        <link refid="img__proces_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Image-Computing-POS-Project/multithread.cpp</label>
+        <link refid="multithread_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>mutex</label>
+      </node>
+      <node id="9">
+        <label>opencv2/core/matx.hpp</label>
+      </node>
+      <node id="8">
+        <label>opencv2/core/utility.hpp</label>
+      </node>
+      <node id="7">
+        <label>opencv2/highgui.hpp</label>
+      </node>
+      <node id="6">
+        <label>opencv2/imgproc.hpp</label>
+      </node>
+      <node id="3">
+        <label>thread</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" prot="public" static="no" mutable="no">
+        <type>auto</type>
+        <definition>auto processors</definition>
+        <argsstring></argsstring>
+        <name>processors</name>
+        <initializer>= std::thread::hardware_concurrency()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>variable which defines number of available threads to run our process </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/multithread.cpp" line="11" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" prot="public" static="no" mutable="no">
+        <type>mutex</type>
+        <definition>mutex mymutex</definition>
+        <argsstring></argsstring>
+        <name>mymutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>declaration of mutex </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/multithread.cpp" line="16" column="7" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" prot="public" static="no" mutable="no">
+        <type>thread *</type>
+        <definition>thread* worker</definition>
+        <argsstring></argsstring>
+        <name>worker</name>
+        <initializer>= new thread[<ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref>]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>creating an array of threads to process images </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/multithread.cpp" line="21" column="8" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Work</definition>
+        <argsstring>(int n)</argsstring>
+        <name>Work</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>thread routine. An image is loaded, processed and then a mutex locks to make sure only one image is written to hdd at a time. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a number of current processed image from images vector</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/multithread.cpp" line="23" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="23" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void multithread</definition>
+        <argsstring>()</argsstring>
+        <name>multithread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function enables multithread processing. At first the number of iterations is counted, given the number of images to process. Whole processing work is divided by the number of available threads to run. Function starts each thread and as it finished its work, realeases a thread in a for() loop. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>This function enables multithread processing. At first the number of iterations is counted, given the number of images to process. Whole processing work is divided by the number of available threads to run. Function starts each thread and as it finished its work, realeases a thread in a for() loop.</para>
+<para>delete an array of threads</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/multithread.cpp" line="37" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="37" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="img__proces_8h" kindref="compound">img_proces.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref><sp/>=<sp/>std::thread::hardware_concurrency();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" refkind="member"><highlight class="normal">mutex<sp/><ref refid="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" kindref="member">mymutex</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" refkind="member"><highlight class="normal">thread*<sp/><ref refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" kindref="member">worker</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>thread[<ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref>];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" kindref="member">Work</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" kindref="member">img_read</ref>(n);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1a460b50e10053ab4e957b16eb60df2e3e" kindref="member">edge_detecting</ref>(n);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" kindref="member">mymutex</ref>.lock();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" kindref="member">img_write</ref>(n);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" kindref="member">mymutex</ref>.unlock();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" kindref="member">multithread</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>threads:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>images<sp/>=<sp/>size(<ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iterations<sp/>=<sp/>size(<ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>)<sp/>/<sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size(<ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>)<sp/>%<sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iterations++;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>iterations;<sp/>i++)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>iterations<sp/>-<sp/>1<sp/>&amp;&amp;<sp/>size(<ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>)<sp/>%<sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref><sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref><sp/>=<sp/>size(<ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>)<sp/>%<sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref>;<sp/>j++)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" kindref="member">worker</ref>[j]<sp/>=<sp/>thread(<ref refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" kindref="member">Work</ref>,<sp/>images);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>images--;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" kindref="member">processors</ref>;<sp/>j++)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" kindref="member">worker</ref>[j].join();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/><ref refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" kindref="member">worker</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Image-Computing-POS-Project/multithread.cpp"/>
+  </compounddef>
+</doxygen>

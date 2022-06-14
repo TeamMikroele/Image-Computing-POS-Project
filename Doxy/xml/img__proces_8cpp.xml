@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="img__proces_8cpp" kind="file" language="C++">
+    <compoundname>img_proces.cpp</compoundname>
+    <includes local="yes">opencv2/imgproc.hpp</includes>
+    <includes local="yes">opencv2/highgui.hpp</includes>
+    <includes local="yes">opencv2/core/utility.hpp</includes>
+    <includes local="yes">opencv2/core/matx.hpp</includes>
+    <includes local="no">iostream</includes>
+    <includes local="yes">string</includes>
+    <includes refid="ini__parser_8h" local="yes">ini_parser.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Image-Computing-POS-Project/img_proces.cpp</label>
+        <link refid="img__proces_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ini_parser.h</label>
+        <link refid="ini__parser_8h"/>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>opencv2/core/matx.hpp</label>
+      </node>
+      <node id="4">
+        <label>opencv2/core/utility.hpp</label>
+      </node>
+      <node id="3">
+        <label>opencv2/highgui.hpp</label>
+      </node>
+      <node id="2">
+        <label>opencv2/imgproc.hpp</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <innernamespace refid="namespacecv">cv</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ROWS</definition>
+        <argsstring></argsstring>
+        <name>ROWS</name>
+        <initializer>= 125</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>variable which defines size of cropped images </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="12" column="11" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int COLS</definition>
+        <argsstring></argsstring>
+        <name>COLS</name>
+        <initializer>= 125</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>variable which defines size of cropped images </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="16" column="11" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" prot="public" static="no" mutable="no">
+        <type>vector&lt; Mat &gt;</type>
+        <definition>vector&lt;Mat&gt; Image</definition>
+        <argsstring></argsstring>
+        <name>Image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vector of images to process </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="24" column="8" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" prot="public" static="no" mutable="no">
+        <type>vector&lt; Mat &gt;</type>
+        <definition>vector&lt;Mat&gt; ImageColor</definition>
+        <argsstring></argsstring>
+        <name>ImageColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vector of loaded coloured images </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="28" column="8" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" prot="public" static="no" mutable="no">
+        <type>vector&lt; String &gt;</type>
+        <definition>vector&lt;String&gt; filenames</definition>
+        <argsstring></argsstring>
+        <name>filenames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vector of loaded images names </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="32" column="8" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void read_input_folder_info</definition>
+        <argsstring>()</argsstring>
+        <name>read_input_folder_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function to read info of images to process </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>function to read info of images to process</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="34" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="34" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void img_read</definition>
+        <argsstring>(int img_index)</argsstring>
+        <name>img_read</name>
+        <param>
+          <type>int</type>
+          <declname>img_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reads one image from source folder </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>reads one image from source folder <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an index of processed image</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="47" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void img_write</definition>
+        <argsstring>(int img_index)</argsstring>
+        <name>img_write</name>
+        <param>
+          <type>int</type>
+          <declname>img_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>writes one processed image to destination folder </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>writes one processed image to destination folder <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an index of processed image</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="56" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="56" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8cpp_1a460b50e10053ab4e957b16eb60df2e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void edge_detecting</definition>
+        <argsstring>(int img_index)</argsstring>
+        <name>edge_detecting</name>
+        <param>
+          <type>int</type>
+          <declname>img_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>edge detecting function based on laplacian detection, processes singular image </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>edge detecting function based on laplacian detection, processes singular image <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is an index of processed image</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="65" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="65" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="img__proces_8cpp_1ae74c141a050d22ccda7686c4ac762459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void thumbnails_matrix</definition>
+        <argsstring>(string file_name, vector&lt; Mat &gt; ImagesToConcatanate)</argsstring>
+        <name>thumbnails_matrix</name>
+        <param>
+          <type>string</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>vector&lt; Mat &gt;</type>
+          <declname>ImagesToConcatanate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>creates matrix of thumbnails of given images </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>creates matrix of thumbnails of given images <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the name of output thumbnail matrix file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ImagesToConcatanate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a vector of images to merge</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/img_proces.cpp" line="75" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="75" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;opencv2/imgproc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/highgui.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/core/utility.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/core/matx.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;string&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ini__parser_8h" kindref="compound">ini_parser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" kindref="member">ROWS</ref><sp/>=<sp/>125;</highlight></codeline>
+<codeline lineno="16" refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" kindref="member">COLS</ref><sp/>=<sp/>125;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">cv;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" refkind="member"><highlight class="normal">vector&lt;Mat&gt;<sp/><ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>;</highlight></codeline>
+<codeline lineno="28" refid="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" refkind="member"><highlight class="normal">vector&lt;Mat&gt;<sp/><ref refid="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" kindref="member">ImageColor</ref>;</highlight></codeline>
+<codeline lineno="32" refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" refkind="member"><highlight class="normal">vector&lt;String&gt;<sp/><ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" kindref="member">read_input_folder_info</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat_s(<ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kindref="member">input</ref>,<sp/></highlight><highlight class="stringliteral">&quot;*.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>glob(<ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kindref="member">input</ref>,<sp/><ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>.resize(<ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>.size());</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" kindref="member">ImageColor</ref>.resize(<ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>.size());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>.size())</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>there<sp/>is<sp/>no<sp/>.png<sp/>file<sp/>in<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kindref="member">input</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" kindref="member">img_read</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>img_index)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>[img_index]<sp/>=<sp/>imread(<ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>[img_index]);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" kindref="member">ImageColor</ref>[img_index]<sp/>=<sp/>imread(<ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>[img_index],<sp/>IMREAD_GRAYSCALE);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" kindref="member">img_write</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>img_index)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName<sp/>=<sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1adc4ecf23b1215d4e65058f2174443355" kindref="member">output</ref><sp/>+<sp/>to_string(img_index)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>imwrite(fileName,<sp/><ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>[img_index]);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="img__proces_8cpp_1a460b50e10053ab4e957b16eb60df2e3e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8cpp_1a460b50e10053ab4e957b16eb60df2e3e" kindref="member">edge_detecting</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>img_index)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>Mat<sp/>tmp;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>cvtColor(<ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>[img_index],<sp/>tmp,<sp/>COLOR_BGR2GRAY,<sp/>0);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>Laplacian(tmp,<sp/><ref refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" kindref="member">Image</ref>[img_index],<sp/>CV_16S,<sp/>5,<sp/>1,<sp/>0,<sp/>4);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="img__proces_8cpp_1ae74c141a050d22ccda7686c4ac762459" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="img__proces_8cpp_1ae74c141a050d22ccda7686c4ac762459" kindref="member">thumbnails_matrix</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>file_name,<sp/>vector&lt;Mat&gt;<sp/>ImagesToConcatanate){</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Mat&gt;<sp/>CroppedImages;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>CroppedImages.resize(<ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>.size());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>img_index<sp/>=<sp/>0;<sp/>img_index<sp/>&lt;<sp/><ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>.size();<sp/>img_index++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CroppedImages[img_index]<sp/>=<sp/>ImagesToConcatanate[img_index](</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rect(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImagesToConcatanate[img_index].size().width<sp/>/<sp/>2<sp/>-<sp/><ref refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" kindref="member">ROWS</ref>/2,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImagesToConcatanate[img_index].size().height<sp/>/<sp/>2<sp/>-<sp/><ref refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" kindref="member">COLS</ref>/2,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" kindref="member">ROWS</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" kindref="member">COLS</ref></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>matrix_side<sp/>=<sp/>ceil(sqrt((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>.size()));</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>dimension<sp/>of<sp/>final<sp/>image</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rows<sp/>=<sp/><ref refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" kindref="member">ROWS</ref><sp/>*<sp/>matrix_side;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cols<sp/>=<sp/><ref refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" kindref="member">COLS</ref><sp/>*<sp/>matrix_side;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>black<sp/>image</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>Mat<sp/>res<sp/>=<sp/>cv::Mat::zeros(cv::Size(rows,<sp/>cols),<sp/>CV_64F);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>matrix_side;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>(j<sp/>&lt;<sp/>matrix_side)<sp/>and<sp/>(j<sp/>+<sp/>matrix_side<sp/>*<sp/>i<sp/>&lt;<sp/><ref refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" kindref="member">filenames</ref>.size());<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CroppedImages[j<sp/>+<sp/>matrix_side*i].copyTo(res(Rect(<ref refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" kindref="member">COLS</ref>*j,<sp/><ref refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" kindref="member">ROWS</ref>*i,<sp/>CroppedImages[j<sp/>+<sp/>matrix_side<sp/>*<sp/>i].cols,<sp/>CroppedImages[j<sp/>+<sp/>matrix_side<sp/>*<sp/>i].rows)));</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName<sp/>=<sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1adc4ecf23b1215d4e65058f2174443355" kindref="member">output</ref><sp/>+<sp/>file_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>imwrite(fileName,<sp/>res);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Image-Computing-POS-Project/img_proces.cpp"/>
+  </compounddef>
+</doxygen>

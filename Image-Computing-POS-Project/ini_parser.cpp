@@ -3,10 +3,9 @@
 
 using namespace std;
 
-struct dir {
-	char input [256];
-	char output [256];
-};
+/**
+* global variable of directories of input and output dir
+*/
 struct dir dir_img;
 
 char * get_dir() {
@@ -30,6 +29,10 @@ char * get_dir() {
 }
 
 bool check_dir(char * dir) {
+/**
+* checks if given directory in *.ini file exists
+* @param dir is an array of chars which contains directory
+*/
 	if (dir == NULL) {
 
 		cout << "Cannot read a directory" << endl;
@@ -49,6 +52,9 @@ bool check_dir(char * dir) {
 }
 
 int ini_read() {
+/**
+* reads initialization file
+*/
 	GetPrivateProfileString("input_folder", "input", NULL, dir_img.input, 256, get_dir());
 	GetPrivateProfileString("output_folder", "output", NULL, dir_img.output, 256, get_dir());
 

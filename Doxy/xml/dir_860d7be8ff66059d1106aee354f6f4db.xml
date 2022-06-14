@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_860d7be8ff66059d1106aee354f6f4db" kind="dir">
+    <compoundname>Image-Computing-POS-Project</compoundname>
+    <innerfile refid="img__proces_8cpp">img_proces.cpp</innerfile>
+    <innerfile refid="img__proces_8h">img_proces.h</innerfile>
+    <innerfile refid="ini__parser_8cpp">ini_parser.cpp</innerfile>
+    <innerfile refid="ini__parser_8h">ini_parser.h</innerfile>
+    <innerfile refid="_main_8cpp">Main.cpp</innerfile>
+    <innerfile refid="multithread_8cpp">multithread.cpp</innerfile>
+    <innerfile refid="multithread_8h">multithread.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Image-Computing-POS-Project/"/>
+  </compounddef>
+</doxygen>
