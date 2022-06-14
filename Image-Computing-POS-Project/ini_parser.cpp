@@ -1,8 +1,5 @@
 #include <iostream>
 #include <windows.h>
-#include <sys/stat.h>
-#include "ini_parser.h"
-
 
 using namespace std;
 
@@ -11,12 +8,31 @@ using namespace std;
 */
 struct dir dir_img;
 
+char * get_dir() {
+	char ownPth[MAX_PATH];
+
+	// When NULL is passed to GetModuleHandle, the handle of the exe itself is returned
+	HMODULE hModule = GetModuleHandle(NULL);
+	if (hModule != NULL)
+	{
+		// Use GetModuleFileName() with module handle to get the path
+		GetModuleFileName(hModule, ownPth, (sizeof(ownPth)));
+		char buf[MAX_PATH];
+		sprintf_s(buf, "%s/../../../Image-Computing-POS-Project/Initial_file.ini", ownPth);
+		return buf;
+	}
+	else
+	{
+		cout << "Module handle is NULL" << endl;
+		return ownPth;
+	}
+}
+
 bool check_dir(char * dir) {
 /**
 * checks if given directory in *.ini file exists
 * @param dir is an array of chars which contains directory
 */
-
 	if (dir == NULL) {
 
 		cout << "Cannot read a directory" << endl;
@@ -39,8 +55,8 @@ int ini_read() {
 /**
 * reads initialization file
 */
-	GetPrivateProfileString("input_folder", "input", NULL, dir_img.input, 256, "./Initial_file.ini");
-	GetPrivateProfileString("output_folder", "output", NULL, dir_img.output, 256, "./Initial_file.ini");
+	GetPrivateProfileString("input_folder", "input", NULL, dir_img.input, 256, get_dir());
+	GetPrivateProfileString("output_folder", "output", NULL, dir_img.output, 256, get_dir());
 
 	if (!check_dir(dir_img.input) || !check_dir(dir_img.output)) {
 		return 0;
