@@ -12,8 +12,9 @@ int main() {
 	* program main function
 	* calls every needed function
 	* memory tests can be called from here
+  * @return returns program status and error codes
 	*/
-	#ifdef debug
+#ifdef debug
 		// Memory leak
 		int* q = new int;
 		//no delete
@@ -24,8 +25,8 @@ int main() {
 			test[i] = 1;
 		}
 		_ASSERTE(_CrtCheckMemory());
-	#endif
-
+#endif
+  
 	ini_read();
 	read_input_folder_info();
 	multithread();
