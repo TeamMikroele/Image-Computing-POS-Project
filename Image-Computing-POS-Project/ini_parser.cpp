@@ -10,6 +10,10 @@ using namespace std;
 struct dir dir_img;
 
 char * get_dir() {
+/**
+* function reads global path of .exe file and changes it to folder where .ini file is located
+* @return string with a global path to .ini file
+*/
 	char ownPth[MAX_PATH];
 
 	// When NULL is passed to GetModuleHandle, the handle of the exe itself is returned
@@ -55,6 +59,7 @@ bool check_dir(char * dir) {
 int ini_read() {
 /**
 * reads initialization file and output file from path in Initial_file.ini
+* @return returns 1 in case given directories in .ini file exist, if not returns 0
 */
 	GetPrivateProfileString("input_folder", "input", NULL, dir_img.input, 256, get_dir());
 	GetPrivateProfileString("output_folder", "output", NULL, dir_img.output, 256, get_dir());
