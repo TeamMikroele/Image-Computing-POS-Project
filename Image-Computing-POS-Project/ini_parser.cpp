@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include "ini_parser.h"
 
 using namespace std;
 
