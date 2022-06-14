@@ -31,7 +31,7 @@ char * get_dir() {
 
 bool check_dir(char * dir) {
 /**
-* checks if given directory in *.ini file exists
+* checks if given directory in *.ini file exists and output statement if it doesn't exist
 * @param dir is an array of chars which contains directory
 */
 	if (dir == NULL) {
@@ -54,7 +54,7 @@ bool check_dir(char * dir) {
 
 int ini_read() {
 /**
-* reads initialization file
+* reads initialization file and output file from path in Initial_file.ini
 */
 	GetPrivateProfileString("input_folder", "input", NULL, dir_img.input, 256, get_dir());
 	GetPrivateProfileString("output_folder", "output", NULL, dir_img.output, 256, get_dir());

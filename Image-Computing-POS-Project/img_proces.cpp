@@ -33,7 +33,7 @@ vector<String> filenames;
 
 void read_input_folder_info() {
 /**
- * function to read info of images to process
+ * function to read info of images to process, gives statement if input folder is empty
  */
 	strcat_s(dir_img.input, "*.png");
 	glob(dir_img.input, filenames);
@@ -46,7 +46,7 @@ void read_input_folder_info() {
 
 void img_read(int img_index) {
 /**
-* reads one image from source folder
+* reads one image from source folder, saves output image to global variable
 * @param img_index is an index of processed image
 */
 	Image[img_index] = imread(filenames[img_index]);
@@ -55,7 +55,7 @@ void img_read(int img_index) {
 
 void img_write(int img_index) {
 /**
-* writes one processed image to destination folder
+* writes one processed image from edge_detecting function to destination folder
 * @param img_index is an index of processed image
 */
 	string fileName = dir_img.output + to_string(img_index) + ".png";
@@ -64,7 +64,8 @@ void img_write(int img_index) {
 
 void edge_detecting(int img_index) {
 /**
-* edge detecting function based on laplacian detection, processes singular image
+* edge detecting function based on laplacian detection, processes singular image from img_read function
+* and saves output to global variable
 * @param img_index is an index of processed image
 */
 	Mat tmp;
@@ -74,7 +75,7 @@ void edge_detecting(int img_index) {
 
 void thumbnails_matrix(string file_name, vector<Mat> ImagesToConcatanate){
 /**
-* creates matrix of thumbnails of given images
+* creates matrix of thumbnails of given images, and saves to output file
 * @param file_name is the name of output thumbnail matrix file
 * @param ImagesToConcatanate is a vector of images to merge
 */
