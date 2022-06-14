@@ -9,6 +9,7 @@ int main() {
 /**
 * program main function
 * calls every needed function
+* @return returns program status and error codes
 */
 	ini_read();
 	read_input_folder_info();
