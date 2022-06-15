@@ -12,7 +12,7 @@ int main() {
 	* program main function
 	* calls every needed function
 	* memory tests can be called from here
-  * @return returns program status and error codes
+  * @return program status and error codes
 	*/
 #ifdef debug
 		// Memory leak

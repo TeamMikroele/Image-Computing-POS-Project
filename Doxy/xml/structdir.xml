@@ -17,6 +17,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/ini_parser.h" line="6" column="6" bodyfile="Image-Computing-POS-Project/ini_parser.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" compoundref="ini__parser_8cpp" startline="61" endline="73">ini_read</referencedby>
+        <referencedby refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" compoundref="img__proces_8cpp" startline="34" endline="45">read_input_folder_info</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structdir_1adc4ecf23b1215d4e65058f2174443355" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -31,6 +33,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/ini_parser.h" line="7" column="6" bodyfile="Image-Computing-POS-Project/ini_parser.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" compoundref="img__proces_8cpp" startline="56" endline="63">img_write</referencedby>
+        <referencedby refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" compoundref="ini__parser_8cpp" startline="61" endline="73">ini_read</referencedby>
+        <referencedby refid="img__proces_8cpp_1ae74c141a050d22ccda7686c4ac762459" compoundref="img__proces_8cpp" startline="76" endline="112">thumbnails_matrix</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

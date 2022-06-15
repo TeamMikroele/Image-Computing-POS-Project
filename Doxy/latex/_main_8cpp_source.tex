@@ -7,17 +7,32 @@
 \DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{img__proces_8h}{img\_proces.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{multithread_8h}{multithread.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00006}00006 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00006}00006 \textcolor{comment}{//\#define debug}}
 \DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00008}\mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00008}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00013}00013     \mbox{\hyperlink{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}{ini\_read}}();}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00014}00014     \mbox{\hyperlink{img__proces_8cpp_aa2dfd97634c85a8aa41a3c43f7a42ff8}{read\_input\_folder\_info}}();}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00015}00015     \mbox{\hyperlink{multithread_8cpp_a9a8cc02a6821d411e7d417edabcf1e95}{multithread}}();}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00016}00016     \mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{thumbnails\_matrix}}(\textcolor{stringliteral}{"{}matrix\_input"{}}, \mbox{\hyperlink{img__proces_8cpp_a89c83fb2ccc008610c5aeb92e654b32b}{ImageColor}});}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00017}00017     \mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{thumbnails\_matrix}}(\textcolor{stringliteral}{"{}matrix\_processed"{}}, \mbox{\hyperlink{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}{Image}});}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00018}00018 }
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00019}00019     system(\textcolor{stringliteral}{"{}PAUSE"{}});}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00020}00020     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00008}00008 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00010}\mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00010}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00017}00017 \textcolor{preprocessor}{\#ifdef debug}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00018}00018         \textcolor{comment}{// Memory leak}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00019}00019         \textcolor{keywordtype}{int}* q = \textcolor{keyword}{new} int;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00020}00020         \textcolor{comment}{//no delete}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00021}00021         \_CrtDumpMemoryLeaks();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00023}00023         \textcolor{keywordtype}{int}* test = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[1];}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00024}00024         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00025}00025             test[i] = 1;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00026}00026         \}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00027}00027         \_ASSERTE(\_CrtCheckMemory());}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00028}00028 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00029}00029   }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00030}00030     \mbox{\hyperlink{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}{ini\_read}}();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00031}00031     \mbox{\hyperlink{img__proces_8cpp_aa2dfd97634c85a8aa41a3c43f7a42ff8}{read\_input\_folder\_info}}();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00032}00032     \mbox{\hyperlink{multithread_8cpp_a9a8cc02a6821d411e7d417edabcf1e95}{multithread}}();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00033}00033     \mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{thumbnails\_matrix}}(\textcolor{stringliteral}{"{}matrix\_input"{}}, \mbox{\hyperlink{img__proces_8cpp_a89c83fb2ccc008610c5aeb92e654b32b}{ImageColor}});}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00034}00034     \mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{thumbnails\_matrix}}(\textcolor{stringliteral}{"{}matrix\_processed"{}}, \mbox{\hyperlink{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}{Image}});}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00035}00035     \_ASSERTE(\_CrtCheckMemory());}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00036}00036     system(\textcolor{stringliteral}{"{}PAUSE"{}});}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00037}00037     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00038}00038 \}}
 
 \end{DoxyCode}

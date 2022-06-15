@@ -7,6 +7,8 @@
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include \char`\"{}string\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ini\+\_\+parser.\+h\char`\"{}}\newline
+Include dependency graph for img\+\_\+proces.\+cpp\+:
+% FIG 0
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,7 +44,7 @@ vector$<$ String $>$ \mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f168491
 \doxysubsubsection{\texorpdfstring{edge\_detecting()}{edge\_detecting()}}
 {\footnotesize\ttfamily void edge\+\_\+detecting (\begin{DoxyParamCaption}\item[{int}]{img\+\_\+index }\end{DoxyParamCaption})}
 
-edge detecting function based on laplacian detection, processes singular image edge detecting function based on laplacian detection, processes singular image 
+edge detecting function based on laplacian detection, processes singular image edge detecting function based on laplacian detection, processes singular image from img\+\_\+read function and saves output to global variable 
 \begin{DoxyParams}{Parameters}
 {\em img\+\_\+index} & is an index of processed image\\
 \hline
@@ -51,13 +53,15 @@ edge detecting function based on laplacian detection, processes singular image e
 
 Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
 
+Here is the caller graph for this function\+:
+% FIG 1
 \mbox{\Hypertarget{img__proces_8cpp_ad9f454c15364682bb607240fdac83db7}\label{img__proces_8cpp_ad9f454c15364682bb607240fdac83db7}} 
 \index{img\_proces.cpp@{img\_proces.cpp}!img\_read@{img\_read}}
 \index{img\_read@{img\_read}!img\_proces.cpp@{img\_proces.cpp}}
 \doxysubsubsection{\texorpdfstring{img\_read()}{img\_read()}}
 {\footnotesize\ttfamily void img\+\_\+read (\begin{DoxyParamCaption}\item[{int}]{img\+\_\+index }\end{DoxyParamCaption})}
 
-reads one image from source folder reads one image from source folder 
+reads one image from source folder reads one image from source folder, saves output image to global variable 
 \begin{DoxyParams}{Parameters}
 {\em img\+\_\+index} & is an index of processed image\\
 \hline
@@ -66,13 +70,15 @@ reads one image from source folder reads one image from source folder
 
 Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
 
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{img__proces_8cpp_a63417198c529b960ec8a21eaa9d256c3}\label{img__proces_8cpp_a63417198c529b960ec8a21eaa9d256c3}} 
 \index{img\_proces.cpp@{img\_proces.cpp}!img\_write@{img\_write}}
 \index{img\_write@{img\_write}!img\_proces.cpp@{img\_proces.cpp}}
 \doxysubsubsection{\texorpdfstring{img\_write()}{img\_write()}}
 {\footnotesize\ttfamily void img\+\_\+write (\begin{DoxyParamCaption}\item[{int}]{img\+\_\+index }\end{DoxyParamCaption})}
 
-writes one processed image to destination folder writes one processed image to destination folder 
+writes one processed image to destination folder writes one processed image from edge\+\_\+detecting function to destination folder 
 \begin{DoxyParams}{Parameters}
 {\em img\+\_\+index} & is an index of processed image\\
 \hline
@@ -81,23 +87,27 @@ writes one processed image to destination folder writes one processed image to d
 
 Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
 
+Here is the caller graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{img__proces_8cpp_aa2dfd97634c85a8aa41a3c43f7a42ff8}\label{img__proces_8cpp_aa2dfd97634c85a8aa41a3c43f7a42ff8}} 
 \index{img\_proces.cpp@{img\_proces.cpp}!read\_input\_folder\_info@{read\_input\_folder\_info}}
 \index{read\_input\_folder\_info@{read\_input\_folder\_info}!img\_proces.cpp@{img\_proces.cpp}}
 \doxysubsubsection{\texorpdfstring{read\_input\_folder\_info()}{read\_input\_folder\_info()}}
 {\footnotesize\ttfamily void read\+\_\+input\+\_\+folder\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-function to read info of images to process function to read info of images to process
+function to read info of images to process function to read info of images to process, gives statement if input folder is empty
 
 Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
 
+Here is the caller graph for this function\+:
+% FIG 4
 \mbox{\Hypertarget{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}\label{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}} 
 \index{img\_proces.cpp@{img\_proces.cpp}!thumbnails\_matrix@{thumbnails\_matrix}}
 \index{thumbnails\_matrix@{thumbnails\_matrix}!img\_proces.cpp@{img\_proces.cpp}}
 \doxysubsubsection{\texorpdfstring{thumbnails\_matrix()}{thumbnails\_matrix()}}
 {\footnotesize\ttfamily void thumbnails\+\_\+matrix (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name,  }\item[{vector$<$ Mat $>$}]{Images\+To\+Concatanate }\end{DoxyParamCaption})}
 
-creates matrix of thumbnails of given images creates matrix of thumbnails of given images 
+creates matrix of thumbnails of given images creates matrix of thumbnails of given images, and saves to output file 
 \begin{DoxyParams}{Parameters}
 {\em file\+\_\+name} & is the name of output thumbnail matrix file \\
 \hline
@@ -106,8 +116,10 @@ creates matrix of thumbnails of given images creates matrix of thumbnails of giv
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
+Definition at line \mbox{\hyperlink{img__proces_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{img__proces_8cpp_source}{img\+\_\+proces.\+cpp}}.
 
+Here is the caller graph for this function\+:
+% FIG 5
 
 
 \doxysubsection{Variable Documentation}

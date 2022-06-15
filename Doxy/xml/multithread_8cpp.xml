@@ -73,6 +73,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/multithread.cpp" line="11" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="11" bodyend="-1"/>
+        <referencedby refid="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" compoundref="multithread_8cpp" startline="37" endline="73">multithread</referencedby>
       </memberdef>
       <memberdef kind="variable" id="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" prot="public" static="no" mutable="no">
         <type>mutex</type>
@@ -87,6 +88,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/multithread.cpp" line="16" column="7" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="16" bodyend="-1"/>
+        <referencedby refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" compoundref="multithread_8cpp" startline="23" endline="35">Work</referencedby>
       </memberdef>
       <memberdef kind="variable" id="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" prot="public" static="no" mutable="no">
         <type>thread *</type>
@@ -102,6 +104,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/multithread.cpp" line="21" column="8" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="21" bodyend="-1"/>
+        <referencedby refid="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" compoundref="multithread_8cpp" startline="37" endline="73">multithread</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -131,6 +134,11 @@
 </para>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/multithread.cpp" line="23" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="23" bodyend="35"/>
+        <references refid="img__proces_8cpp_1a460b50e10053ab4e957b16eb60df2e3e" compoundref="img__proces_8cpp" startline="65" endline="74">edge_detecting</references>
+        <references refid="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" compoundref="img__proces_8cpp" startline="47" endline="54">img_read</references>
+        <references refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" compoundref="img__proces_8cpp" startline="56" endline="63">img_write</references>
+        <references refid="multithread_8cpp_1a4aac70c29fbd4e257a43b3ae2b3a4250" compoundref="multithread_8cpp" startline="16">mymutex</references>
+        <referencedby refid="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" compoundref="multithread_8cpp" startline="37" endline="73">multithread</referencedby>
       </memberdef>
       <memberdef kind="function" id="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -147,6 +155,11 @@
 <para>delete an array of threads</para>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/multithread.cpp" line="37" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="37" bodyend="73"/>
+        <references refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" compoundref="img__proces_8cpp" startline="24">Image</references>
+        <references refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" compoundref="multithread_8cpp" startline="11">processors</references>
+        <references refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" compoundref="multithread_8cpp" startline="23" endline="35">Work</references>
+        <references refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" compoundref="multithread_8cpp" startline="21">worker</references>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

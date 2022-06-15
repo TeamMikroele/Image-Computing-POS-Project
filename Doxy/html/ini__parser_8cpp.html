@@ -74,13 +74,19 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;windows.h&gt;</code><br />
-<code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="ini__parser_8h_source.html">ini_parser.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for ini_parser.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="ini__parser_8cpp__incl.png" border="0" usemap="#a_image-_computing-_p_o_s-_project_2ini__parser_8cpp" alt=""/></div>
+</div>
 </div>
 <p><a href="ini__parser_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab8cfad0784f354878697c05ea745245a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ini__parser_8cpp.html#ab8cfad0784f354878697c05ea745245a">get_dir</a> ()</td></tr>
+<tr class="separator:ab8cfad0784f354878697c05ea745245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab394e2c29636a1b9ed0ea35a4ea4e387"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ini__parser_8cpp.html#ab394e2c29636a1b9ed0ea35a4ea4e387">check_dir</a> (char *<a class="el" href="structdir.html">dir</a>)</td></tr>
 <tr class="separator:ab394e2c29636a1b9ed0ea35a4ea4e387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad888b7d22149211c49a67fafe27442fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ini__parser_8cpp.html#ad888b7d22149211c49a67fafe27442fa">ini_read</a> ()</td></tr>
@@ -107,14 +113,47 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >checks if given directory in *.ini file exists </p><dl class="params"><dt>Parameters</dt><dd>
+<p >checks if given directory in *.ini file exists and output statement if it doesn't exist </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dir</td><td>is an array of chars which contains directory</td></tr>
+    <tr><td class="paramname">dir</td><td>is an array of chars which contains directory </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true in case given directory exists </dd>
+<dd>
+false in case given directory doesn't exist</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ini__parser_8cpp_source.html#l00014">14</a> of file <a class="el" href="ini__parser_8cpp_source.html">ini_parser.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ini__parser_8cpp_source.html#l00036">36</a> of file <a class="el" href="ini__parser_8cpp_source.html">ini_parser.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387_icgraph.png" border="0" usemap="#aini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab8cfad0784f354878697c05ea745245a" name="ab8cfad0784f354878697c05ea745245a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8cfad0784f354878697c05ea745245a">&#9670;&nbsp;</a></span>get_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * get_dir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >function reads global path of .exe file and changes it to folder where .ini file is located </p><dl class="section return"><dt>Returns</dt><dd>string with a global path to .ini file</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ini__parser_8cpp_source.html#l00012">12</a> of file <a class="el" href="ini__parser_8cpp_source.html">ini_parser.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a_icgraph.png" border="0" usemap="#aini__parser_8cpp_ab8cfad0784f354878697c05ea745245a_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -133,9 +172,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >reads initialization file </p>
-<p >reads initialization file</p>
+<p >reads initialization file and output file from path in Initial_file.ini </p><dl class="section return"><dt>Returns</dt><dd>1 in case given directories in .ini file exist, if not returns 0</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ini__parser_8cpp_source.html#l00038">38</a> of file <a class="el" href="ini__parser_8cpp_source.html">ini_parser.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ini__parser_8cpp_source.html#l00061">61</a> of file <a class="el" href="ini__parser_8cpp_source.html">ini_parser.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa_cgraph.png" border="0" usemap="#aini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa_icgraph.png" border="0" usemap="#aini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -153,7 +202,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p >global variable of directories of input and output dir </p>
 
-<p class="definition">Definition at line <a class="el" href="ini__parser_8cpp_source.html#l00012">12</a> of file <a class="el" href="ini__parser_8cpp_source.html">ini_parser.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ini__parser_8cpp_source.html#l00010">10</a> of file <a class="el" href="ini__parser_8cpp_source.html">ini_parser.cpp</a>.</p>
 
 </div>
 </div>

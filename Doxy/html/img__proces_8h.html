@@ -77,6 +77,16 @@ $(function() {
 <code>#include &quot;opencv2/core/utility.hpp&quot;</code><br />
 <code>#include &quot;opencv2/core/matx.hpp&quot;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for img_proces.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="img__proces_8h__incl.png" border="0" usemap="#a_image-_computing-_p_o_s-_project_2img__proces_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="img__proces_8h__dep__incl.png" border="0" usemap="#a_image-_computing-_p_o_s-_project_2img__proces_8hdep" alt=""/></div>
+</div>
 </div>
 <p><a href="img__proces_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -117,7 +127,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >edge detecting function based on laplacian detection, processes singular image </p>
-<p >edge detecting function based on laplacian detection, processes singular image </p><dl class="params"><dt>Parameters</dt><dd>
+<p >edge detecting function based on laplacian detection, processes singular image from img_read function and saves output to global variable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">img_index</td><td>is an index of processed image</td></tr>
   </table>
@@ -125,6 +135,11 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="img__proces_8cpp_source.html#l00065">65</a> of file <a class="el" href="img__proces_8cpp_source.html">img_proces.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="img__proces_8h_ac4a2fc3fc930683ef71496be869617fa_icgraph.png" border="0" usemap="#aimg__proces_8h_ac4a2fc3fc930683ef71496be869617fa_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -144,7 +159,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >reads one image from source folder </p>
-<p >reads one image from source folder </p><dl class="params"><dt>Parameters</dt><dd>
+<p >reads one image from source folder, saves output image to global variable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">img_index</td><td>is an index of processed image</td></tr>
   </table>
@@ -152,6 +167,11 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="img__proces_8cpp_source.html#l00047">47</a> of file <a class="el" href="img__proces_8cpp_source.html">img_proces.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="img__proces_8h_a1e944fd8ceb274ba6c0345c13a7a3a2d_icgraph.png" border="0" usemap="#aimg__proces_8h_a1e944fd8ceb274ba6c0345c13a7a3a2d_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -171,7 +191,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >writes one processed image to destination folder </p>
-<p >writes one processed image to destination folder </p><dl class="params"><dt>Parameters</dt><dd>
+<p >writes one processed image from edge_detecting function to destination folder </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">img_index</td><td>is an index of processed image</td></tr>
   </table>
@@ -179,6 +199,11 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="img__proces_8cpp_source.html#l00056">56</a> of file <a class="el" href="img__proces_8cpp_source.html">img_proces.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="img__proces_8h_a4664f44d6c1e49cade69d635d26324ff_icgraph.png" border="0" usemap="#aimg__proces_8h_a4664f44d6c1e49cade69d635d26324ff_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -197,9 +222,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >function to read info of images to process </p>
-<p >function to read info of images to process</p>
+<p >function to read info of images to process, gives statement if input folder is empty</p>
 
 <p class="definition">Definition at line <a class="el" href="img__proces_8cpp_source.html#l00034">34</a> of file <a class="el" href="img__proces_8cpp_source.html">img_proces.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="img__proces_8h_aa2dfd97634c85a8aa41a3c43f7a42ff8_icgraph.png" border="0" usemap="#aimg__proces_8h_aa2dfd97634c85a8aa41a3c43f7a42ff8_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -229,7 +259,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >creates matrix of thumbnails of given images </p>
-<p >creates matrix of thumbnails of given images </p><dl class="params"><dt>Parameters</dt><dd>
+<p >creates matrix of thumbnails of given images, and saves to output file </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>is the name of output thumbnail matrix file </td></tr>
     <tr><td class="paramname">ImagesToConcatanate</td><td>is a vector of images to merge</td></tr>
@@ -237,7 +267,12 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="img__proces_8cpp_source.html#l00075">75</a> of file <a class="el" href="img__proces_8cpp_source.html">img_proces.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="img__proces_8cpp_source.html#l00076">76</a> of file <a class="el" href="img__proces_8cpp_source.html">img_proces.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="img__proces_8h_a3ebbe08f7df91e3af1866b8f195f10e2_icgraph.png" border="0" usemap="#aimg__proces_8h_a3ebbe08f7df91e3af1866b8f195f10e2_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>

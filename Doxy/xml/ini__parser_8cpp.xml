@@ -4,7 +4,6 @@
     <compoundname>ini_parser.cpp</compoundname>
     <includes local="no">iostream</includes>
     <includes local="no">windows.h</includes>
-    <includes local="no">sys/stat.h</includes>
     <includes refid="ini__parser_8h" local="yes">ini_parser.h</includes>
     <incdepgraph>
       <node id="1">
@@ -16,18 +15,13 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
       </node>
-      <node id="5">
+      <node id="4">
         <label>ini_parser.h</label>
         <link refid="ini__parser_8h"/>
       </node>
       <node id="2">
         <label>iostream</label>
-      </node>
-      <node id="4">
-        <label>sys/stat.h</label>
       </node>
       <node id="3">
         <label>windows.h</label>
@@ -46,10 +40,31 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Image-Computing-POS-Project/ini_parser.cpp" line="12" column="10" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="12" bodyend="-1"/>
+        <location file="Image-Computing-POS-Project/ini_parser.cpp" line="10" column="10" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="10" bodyend="-1"/>
+        <referencedby refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" compoundref="img__proces_8cpp" startline="56" endline="63">img_write</referencedby>
+        <referencedby refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" compoundref="ini__parser_8cpp" startline="61" endline="73">ini_read</referencedby>
+        <referencedby refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" compoundref="img__proces_8cpp" startline="34" endline="45">read_input_folder_info</referencedby>
+        <referencedby refid="img__proces_8cpp_1ae74c141a050d22ccda7686c4ac762459" compoundref="img__proces_8cpp" startline="76" endline="112">thumbnails_matrix</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
+      <memberdef kind="function" id="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * get_dir</definition>
+        <argsstring>()</argsstring>
+        <name>get_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>function reads global path of .exe file and changes it to folder where .ini file is located <simplesect kind="return"><para>string with a global path to .ini file</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="Image-Computing-POS-Project/ini_parser.cpp" line="12" column="7" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="12" bodyend="34"/>
+        <referencedby refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" compoundref="ini__parser_8cpp" startline="61" endline="73">ini_read</referencedby>
+      </memberdef>
       <memberdef kind="function" id="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool check_dir</definition>
@@ -64,18 +79,23 @@
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>checks if given directory in *.ini file exists <parameterlist kind="param"><parameteritem>
+<para>checks if given directory in *.ini file exists and output statement if it doesn&apos;t exist <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dir</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>is an array of chars which contains directory</para>
+<para>is an array of chars which contains directory </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+<simplesect kind="return"><para>true in case given directory exists </para>
+</simplesect>
+<simplesect kind="return"><para>false in case given directory doesn&apos;t exist</para>
+</simplesect>
 </para>
         </inbodydescription>
-        <location file="Image-Computing-POS-Project/ini_parser.cpp" line="14" column="6" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="14" bodyend="36"/>
+        <location file="Image-Computing-POS-Project/ini_parser.cpp" line="36" column="6" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="36" bodyend="59"/>
+        <referencedby refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" compoundref="ini__parser_8cpp" startline="61" endline="73">ini_read</referencedby>
       </memberdef>
       <memberdef kind="function" id="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -88,9 +108,17 @@
 <para>reads initialization file </para>
         </detaileddescription>
         <inbodydescription>
-<para>reads initialization file</para>
+<para>reads initialization file and output file from path in Initial_file.ini <simplesect kind="return"><para>1 in case given directories in .ini file exist, if not returns 0</para>
+</simplesect>
+</para>
         </inbodydescription>
-        <location file="Image-Computing-POS-Project/ini_parser.cpp" line="38" column="5" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="38" bodyend="49"/>
+        <location file="Image-Computing-POS-Project/ini_parser.cpp" line="61" column="5" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="61" bodyend="73"/>
+        <references refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" compoundref="ini__parser_8cpp" startline="36" endline="59">check_dir</references>
+        <references refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" compoundref="ini__parser_8cpp" startline="10">dir_img</references>
+        <references refid="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" compoundref="ini__parser_8cpp" startline="12" endline="34">get_dir</references>
+        <references refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" compoundref="ini__parser_8h" startline="6">dir::input</references>
+        <references refid="structdir_1adc4ecf23b1215d4e65058f2174443355" compoundref="ini__parser_8h" startline="7">dir::output</references>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -100,42 +128,60 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ini__parser_8h" kindref="compound">ini_parser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ini__parser_8h" kindref="compound">ini_parser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdir" kindref="compound">dir</ref><sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kindref="member">check_dir</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="structdir" kindref="compound">dir</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structdir" kindref="compound">dir</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>read<sp/>a<sp/>directory&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/>buffer;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat(<ref refid="structdir" kindref="compound">dir</ref>,<sp/>&amp;buffer)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="structdir" kindref="compound">dir</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>directory<sp/>doesn&apos;t<sp/>exist!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="structdir" kindref="compound">dir</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>directory<sp/>exist!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" kindref="member">ini_read</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>GetPrivateProfileString(</highlight><highlight class="stringliteral">&quot;input_folder&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;input&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kindref="member">input</ref>,<sp/>256,<sp/></highlight><highlight class="stringliteral">&quot;./Initial_file.ini&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>GetPrivateProfileString(</highlight><highlight class="stringliteral">&quot;output_folder&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1adc4ecf23b1215d4e65058f2174443355" kindref="member">output</ref>,<sp/>256,<sp/></highlight><highlight class="stringliteral">&quot;./Initial_file.ini&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10" refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdir" kindref="compound">dir</ref><sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" kindref="member">get_dir</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ownPth[MAX_PATH];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>NULL<sp/>is<sp/>passed<sp/>to<sp/>GetModuleHandle,<sp/>the<sp/>handle<sp/>of<sp/>the<sp/>exe<sp/>itself<sp/>is<sp/>returned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>HMODULE<sp/>hModule<sp/>=<sp/>GetModuleHandle(NULL);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hModule<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>GetModuleFileName()<sp/>with<sp/>module<sp/>handle<sp/>to<sp/>get<sp/>the<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetModuleFileName(hModule,<sp/>ownPth,<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ownPth)));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[MAX_PATH];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf_s(buf,<sp/></highlight><highlight class="stringliteral">&quot;%s/../../../Image-Computing-POS-Project/Initial_file.ini&quot;</highlight><highlight class="normal">,<sp/>ownPth);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buf;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Module<sp/>handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ownPth;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kindref="member">check_dir</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="structdir" kindref="compound">dir</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structdir" kindref="compound">dir</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kindref="member">check_dir</ref>(<ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kindref="member">input</ref>)<sp/>||<sp/>!<ref refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kindref="member">check_dir</ref>(<ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1adc4ecf23b1215d4e65058f2174443355" kindref="member">output</ref>))<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>read<sp/>a<sp/>directory&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/>buffer;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat(<ref refid="structdir" kindref="compound">dir</ref>,<sp/>&amp;buffer)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="structdir" kindref="compound">dir</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>directory<sp/>doesn&apos;t<sp/>exist!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="structdir" kindref="compound">dir</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>directory<sp/>exist!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" kindref="member">ini_read</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>GetPrivateProfileString(</highlight><highlight class="stringliteral">&quot;input_folder&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;input&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kindref="member">input</ref>,<sp/>256,<sp/><ref refid="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" kindref="member">get_dir</ref>());</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>GetPrivateProfileString(</highlight><highlight class="stringliteral">&quot;output_folder&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1adc4ecf23b1215d4e65058f2174443355" kindref="member">output</ref>,<sp/>256,<sp/><ref refid="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" kindref="member">get_dir</ref>());</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kindref="member">check_dir</ref>(<ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" kindref="member">input</ref>)<sp/>||<sp/>!<ref refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kindref="member">check_dir</ref>(<ref refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kindref="member">dir_img</ref>.<ref refid="structdir_1adc4ecf23b1215d4e65058f2174443355" kindref="member">output</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="Image-Computing-POS-Project/ini_parser.cpp"/>
   </compounddef>

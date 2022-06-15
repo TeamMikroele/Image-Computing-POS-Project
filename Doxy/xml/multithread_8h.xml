@@ -31,6 +31,11 @@
 <para>delete an array of threads</para>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/multithread.h" line="8" column="6" bodyfile="Image-Computing-POS-Project/multithread.cpp" bodystart="37" bodyend="73" declfile="Image-Computing-POS-Project/multithread.h" declline="8" declcolumn="6"/>
+        <references refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" compoundref="img__proces_8cpp" startline="24">Image</references>
+        <references refid="multithread_8cpp_1af76c77153a5f4c39211f8a0965413fe0" compoundref="multithread_8cpp" startline="11">processors</references>
+        <references refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" compoundref="multithread_8cpp" startline="23" endline="35">Work</references>
+        <references refid="multithread_8cpp_1ad71f043e363288f24e89652770ec1eb2" compoundref="multithread_8cpp" startline="21">worker</references>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

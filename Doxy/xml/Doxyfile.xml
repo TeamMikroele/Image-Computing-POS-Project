@@ -340,7 +340,7 @@
   <option  id='EXTERNAL_PAGES' default='yes' type='bool'><value>YES</value></option>
   <option  id='DIA_PATH' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='HIDE_UNDOC_RELATIONS' default='yes' type='bool'><value>YES</value></option>
-  <option  id='HAVE_DOT' default='yes' type='bool'><value>NO</value></option>
+  <option  id='HAVE_DOT' default='no' type='bool'><value>YES</value></option>
   <option  id='DOT_NUM_THREADS' default='yes' type='int'><value>0</value></option>
   <option  id='DOT_FONTNAME' default='yes' type='string'><value><![CDATA[Helvetica]]></value></option>
   <option  id='DOT_FONTSIZE' default='yes' type='int'><value>10</value></option>
@@ -355,8 +355,8 @@
   <option  id='TEMPLATE_RELATIONS' default='yes' type='bool'><value>NO</value></option>
   <option  id='INCLUDE_GRAPH' default='yes' type='bool'><value>YES</value></option>
   <option  id='INCLUDED_BY_GRAPH' default='yes' type='bool'><value>YES</value></option>
-  <option  id='CALL_GRAPH' default='yes' type='bool'><value>NO</value></option>
-  <option  id='CALLER_GRAPH' default='yes' type='bool'><value>NO</value></option>
+  <option  id='CALL_GRAPH' default='no' type='bool'><value>YES</value></option>
+  <option  id='CALLER_GRAPH' default='no' type='bool'><value>YES</value></option>
   <option  id='GRAPHICAL_HIERARCHY' default='yes' type='bool'><value>YES</value></option>
   <option  id='DIRECTORY_GRAPH' default='yes' type='bool'><value>YES</value></option>
   <option  id='DIR_GRAPH_MAX_DEPTH' default='yes' type='int'><value>1</value></option>

@@ -72,6 +72,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/img_proces.h" line="14" column="15" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="24" bodyend="-1" declfile="Image-Computing-POS-Project/img_proces.h" declline="14" declcolumn="15"/>
+        <referencedby refid="img__proces_8cpp_1a460b50e10053ab4e957b16eb60df2e3e" compoundref="img__proces_8cpp" startline="65" endline="74">edge_detecting</referencedby>
+        <referencedby refid="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" compoundref="img__proces_8cpp" startline="47" endline="54">img_read</referencedby>
+        <referencedby refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" compoundref="img__proces_8cpp" startline="56" endline="63">img_write</referencedby>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
+        <referencedby refid="multithread_8cpp_1a9a8cc02a6821d411e7d417edabcf1e95" compoundref="multithread_8cpp" startline="37" endline="73">multithread</referencedby>
+        <referencedby refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" compoundref="img__proces_8cpp" startline="34" endline="45">read_input_folder_info</referencedby>
       </memberdef>
       <memberdef kind="variable" id="img__proces_8h_1a89c83fb2ccc008610c5aeb92e654b32b" prot="public" static="no" mutable="no">
         <type>vector&lt; Mat &gt;</type>
@@ -86,6 +92,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/img_proces.h" line="18" column="15" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="28" bodyend="-1" declfile="Image-Computing-POS-Project/img_proces.h" declline="18" declcolumn="15"/>
+        <referencedby refid="img__proces_8cpp_1ad9f454c15364682bb607240fdac83db7" compoundref="img__proces_8cpp" startline="47" endline="54">img_read</referencedby>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
+        <referencedby refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" compoundref="img__proces_8cpp" startline="34" endline="45">read_input_folder_info</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -100,9 +109,15 @@
 <para>function to read info of images to process </para>
         </detaileddescription>
         <inbodydescription>
-<para>function to read info of images to process</para>
+<para>function to read info of images to process, gives statement if input folder is empty</para>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/img_proces.h" line="23" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="34" bodyend="45" declfile="Image-Computing-POS-Project/img_proces.h" declline="23" declcolumn="6"/>
+        <references refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" compoundref="ini__parser_8cpp" startline="10">dir_img</references>
+        <references refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" compoundref="img__proces_8cpp" startline="32">filenames</references>
+        <references refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" compoundref="img__proces_8cpp" startline="24">Image</references>
+        <references refid="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" compoundref="img__proces_8cpp" startline="28">ImageColor</references>
+        <references refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" compoundref="ini__parser_8h" startline="6">dir::input</references>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="img__proces_8h_1a1e944fd8ceb274ba6c0345c13a7a3a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -119,7 +134,7 @@
 <para>reads one image from source folder </para>
         </detaileddescription>
         <inbodydescription>
-<para>reads one image from source folder <parameterlist kind="param"><parameteritem>
+<para>reads one image from source folder, saves output image to global variable <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>img_index</parametername>
 </parameternamelist>
@@ -131,6 +146,10 @@
 </para>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/img_proces.h" line="27" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="47" bodyend="54" declfile="Image-Computing-POS-Project/img_proces.h" declline="27" declcolumn="6"/>
+        <references refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" compoundref="img__proces_8cpp" startline="32">filenames</references>
+        <references refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" compoundref="img__proces_8cpp" startline="24">Image</references>
+        <references refid="img__proces_8cpp_1a89c83fb2ccc008610c5aeb92e654b32b" compoundref="img__proces_8cpp" startline="28">ImageColor</references>
+        <referencedby refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" compoundref="multithread_8cpp" startline="23" endline="35">Work</referencedby>
       </memberdef>
       <memberdef kind="function" id="img__proces_8h_1a4664f44d6c1e49cade69d635d26324ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -147,7 +166,7 @@
 <para>writes one processed image to destination folder </para>
         </detaileddescription>
         <inbodydescription>
-<para>writes one processed image to destination folder <parameterlist kind="param"><parameteritem>
+<para>writes one processed image from edge_detecting function to destination folder <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>img_index</parametername>
 </parameternamelist>
@@ -159,6 +178,10 @@
 </para>
         </inbodydescription>
         <location file="Image-Computing-POS-Project/img_proces.h" line="31" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="56" bodyend="63" declfile="Image-Computing-POS-Project/img_proces.h" declline="31" declcolumn="6"/>
+        <references refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" compoundref="ini__parser_8cpp" startline="10">dir_img</references>
+        <references refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" compoundref="img__proces_8cpp" startline="24">Image</references>
+        <references refid="structdir_1adc4ecf23b1215d4e65058f2174443355" compoundref="ini__parser_8h" startline="7">dir::output</references>
+        <referencedby refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" compoundref="multithread_8cpp" startline="23" endline="35">Work</referencedby>
       </memberdef>
       <memberdef kind="function" id="img__proces_8h_1ac4a2fc3fc930683ef71496be869617fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -175,7 +198,7 @@
 <para>edge detecting function based on laplacian detection, processes singular image </para>
         </detaileddescription>
         <inbodydescription>
-<para>edge detecting function based on laplacian detection, processes singular image <parameterlist kind="param"><parameteritem>
+<para>edge detecting function based on laplacian detection, processes singular image from img_read function and saves output to global variable <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>img_index</parametername>
 </parameternamelist>
@@ -186,7 +209,9 @@
 </parameterlist>
 </para>
         </inbodydescription>
-        <location file="Image-Computing-POS-Project/img_proces.h" line="35" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="65" bodyend="73" declfile="Image-Computing-POS-Project/img_proces.h" declline="35" declcolumn="6"/>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="35" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="65" bodyend="74" declfile="Image-Computing-POS-Project/img_proces.h" declline="35" declcolumn="6"/>
+        <references refid="img__proces_8cpp_1a2147c4bd2997d8faf67e2152bda096e0" compoundref="img__proces_8cpp" startline="24">Image</references>
+        <referencedby refid="multithread_8cpp_1a5cfb4319272a7987ecf533116fb3ba7b" compoundref="multithread_8cpp" startline="23" endline="35">Work</referencedby>
       </memberdef>
       <memberdef kind="function" id="img__proces_8h_1a3ebbe08f7df91e3af1866b8f195f10e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -207,7 +232,7 @@
 <para>creates matrix of thumbnails of given images </para>
         </detaileddescription>
         <inbodydescription>
-<para>creates matrix of thumbnails of given images <parameterlist kind="param"><parameteritem>
+<para>creates matrix of thumbnails of given images, and saves to output file <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>file_name</parametername>
 </parameternamelist>
@@ -226,7 +251,13 @@
 </parameterlist>
 </para>
         </inbodydescription>
-        <location file="Image-Computing-POS-Project/img_proces.h" line="39" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="75" bodyend="111" declfile="Image-Computing-POS-Project/img_proces.h" declline="39" declcolumn="6"/>
+        <location file="Image-Computing-POS-Project/img_proces.h" line="39" column="6" bodyfile="Image-Computing-POS-Project/img_proces.cpp" bodystart="76" bodyend="112" declfile="Image-Computing-POS-Project/img_proces.h" declline="39" declcolumn="6"/>
+        <references refid="img__proces_8cpp_1abfdc2552f8ab882b4380b2a56cdff54f" compoundref="img__proces_8cpp" startline="16">COLS</references>
+        <references refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" compoundref="ini__parser_8cpp" startline="10">dir_img</references>
+        <references refid="img__proces_8cpp_1a8b27c6453fd218934f16849136640d50" compoundref="img__proces_8cpp" startline="32">filenames</references>
+        <references refid="structdir_1adc4ecf23b1215d4e65058f2174443355" compoundref="ini__parser_8h" startline="7">dir::output</references>
+        <references refid="img__proces_8cpp_1a821282c3fbd7714d8302538a5a674885" compoundref="img__proces_8cpp" startline="12">ROWS</references>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

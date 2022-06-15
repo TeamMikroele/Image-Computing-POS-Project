@@ -4,41 +4,59 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <iostream>}}
 \DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <windows.h>}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <sys/stat.h>}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ini__parser_8h}{ini\_parser.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ini__parser_8h}{ini\_parser.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00005}00005 \textcolor{keyword}{using namespace }std;}
 \DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00007}00007 \textcolor{keyword}{using namespace }std;}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00008}00008 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00012}\mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{00012}} \textcolor{keyword}{struct }\mbox{\hyperlink{structdir}{dir}} \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}};}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00013}00013 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00014}\mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{00014}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\_dir}}(\textcolor{keywordtype}{char} * \mbox{\hyperlink{structdir}{dir}}) \{}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00020}00020     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structdir}{dir}} == NULL) \{}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00021}00021 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00022}00022         cout << \textcolor{stringliteral}{"{}Cannot read a directory"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00023}00023         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00024}00024     \}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00025}00025 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00026}00026     \textcolor{keyword}{struct }stat buffer;}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00027}00027 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00028}00028     \textcolor{keywordflow}{if} (stat(\mbox{\hyperlink{structdir}{dir}}, \&buffer) != 0) \{}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00029}00029         cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \mbox{\hyperlink{structdir}{dir}} << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \textcolor{stringliteral}{"{} directory doesn't exist!"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00030}00030         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00031}00031     \}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00032}00032     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00033}00033         cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \mbox{\hyperlink{structdir}{dir}} << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \textcolor{stringliteral}{"{} directory exist!"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00034}00034     \}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00035}00035     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00036}00036 \}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00037}00037 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00038}\mbox{\hyperlink{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}{00038}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}{ini\_read}}() \{}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00042}00042     GetPrivateProfileString(\textcolor{stringliteral}{"{}input\_folder"{}}, \textcolor{stringliteral}{"{}input"{}}, NULL, \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_ab5504a60475dcc29bbb3dbc30185b215}{input}}, 256, \textcolor{stringliteral}{"{}./Initial\_file.ini"{}});}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00043}00043     GetPrivateProfileString(\textcolor{stringliteral}{"{}output\_folder"{}}, \textcolor{stringliteral}{"{}output"{}}, NULL, \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_adc4ecf23b1215d4e65058f2174443355}{output}}, 256, \textcolor{stringliteral}{"{}./Initial\_file.ini"{}});}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00010}\mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{00010}} \textcolor{keyword}{struct }\mbox{\hyperlink{structdir}{dir}} \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}};}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00012}\mbox{\hyperlink{ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a}{00012}} \textcolor{keywordtype}{char} * \mbox{\hyperlink{ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a}{get\_dir}}() \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00017}00017     \textcolor{keywordtype}{char} ownPth[MAX\_PATH];}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00019}00019     \textcolor{comment}{// When NULL is passed to GetModuleHandle, the handle of the exe itself is returned}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00020}00020     HMODULE hModule = GetModuleHandle(NULL);}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00021}00021     \textcolor{keywordflow}{if} (hModule != NULL)}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00023}00023         \textcolor{comment}{// Use GetModuleFileName() with module handle to get the path}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00024}00024         GetModuleFileName(hModule, ownPth, (\textcolor{keyword}{sizeof}(ownPth)));}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00025}00025         \textcolor{keywordtype}{char} buf[MAX\_PATH];}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00026}00026         sprintf\_s(buf, \textcolor{stringliteral}{"{}\%s/../../../Image-\/Computing-\/POS-\/Project/Initial\_file.ini"{}}, ownPth);}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00027}00027         \textcolor{keywordflow}{return} buf;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00029}00029     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00031}00031         cout << \textcolor{stringliteral}{"{}Module handle is NULL"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00032}00032         \textcolor{keywordflow}{return} ownPth;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00033}00033     \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00036}\mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{00036}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\_dir}}(\textcolor{keywordtype}{char} * \mbox{\hyperlink{structdir}{dir}}) \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00043}00043     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structdir}{dir}} == NULL) \{}
 \DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00044}00044 }
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00045}00045     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\_dir}}(\mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_ab5504a60475dcc29bbb3dbc30185b215}{input}}) || !\mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\_dir}}(\mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_adc4ecf23b1215d4e65058f2174443355}{output}})) \{}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00046}00046         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00045}00045         cout << \textcolor{stringliteral}{"{}Cannot read a directory"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00046}00046         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00047}00047     \}}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00048}00048     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00049}00049     \textcolor{keyword}{struct }stat buffer;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00051}00051     \textcolor{keywordflow}{if} (stat(\mbox{\hyperlink{structdir}{dir}}, \&buffer) != 0) \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00052}00052         cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \mbox{\hyperlink{structdir}{dir}} << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \textcolor{stringliteral}{"{} directory doesn't exist!"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00053}00053         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00055}00055     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00056}00056         cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \mbox{\hyperlink{structdir}{dir}} << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << \textcolor{stringliteral}{"{} directory exist!"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00058}00058     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00059}00059 \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00061}\mbox{\hyperlink{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}{00061}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}{ini\_read}}() \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00066}00066     GetPrivateProfileString(\textcolor{stringliteral}{"{}input\_folder"{}}, \textcolor{stringliteral}{"{}input"{}}, NULL, \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_ab5504a60475dcc29bbb3dbc30185b215}{input}}, 256, \mbox{\hyperlink{ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a}{get\_dir}}());}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00067}00067     GetPrivateProfileString(\textcolor{stringliteral}{"{}output\_folder"{}}, \textcolor{stringliteral}{"{}output"{}}, NULL, \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_adc4ecf23b1215d4e65058f2174443355}{output}}, 256, \mbox{\hyperlink{ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a}{get\_dir}}());}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00069}00069     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\_dir}}(\mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_ab5504a60475dcc29bbb3dbc30185b215}{input}}) || !\mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\_dir}}(\mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_adc4ecf23b1215d4e65058f2174443355}{output}})) \{}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00070}00070         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00071}00071     \}}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00072}00072     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{ini__parser_8cpp_source_l00073}00073 \}}
 
 \end{DoxyCode}

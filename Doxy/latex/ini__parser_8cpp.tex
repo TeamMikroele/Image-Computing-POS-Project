@@ -2,10 +2,13 @@
 \label{ini__parser_8cpp}\index{Image-\/Computing-\/POS-\/Project/ini\_parser.cpp@{Image-\/Computing-\/POS-\/Project/ini\_parser.cpp}}
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$windows.\+h$>$}\newline
-{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}ini\+\_\+parser.\+h\char`\"{}}\newline
+Include dependency graph for ini\+\_\+parser.\+cpp\+:
+% FIG 0
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a}{get\+\_\+dir}} ()
 \item 
 bool \mbox{\hyperlink{ini__parser_8cpp_ab394e2c29636a1b9ed0ea35a4ea4e387}{check\+\_\+dir}} (char $\ast$\mbox{\hyperlink{structdir}{dir}})
 \item 
@@ -25,25 +28,54 @@ struct \mbox{\hyperlink{structdir}{dir}} \mbox{\hyperlink{ini__parser_8cpp_a74ec
 \doxysubsubsection{\texorpdfstring{check\_dir()}{check\_dir()}}
 {\footnotesize\ttfamily bool check\+\_\+dir (\begin{DoxyParamCaption}\item[{char $\ast$}]{dir }\end{DoxyParamCaption})}
 
-checks if given directory in $\ast$.ini file exists 
+checks if given directory in $\ast$.ini file exists and output statement if it doesn\textquotesingle{}t exist 
 \begin{DoxyParams}{Parameters}
-{\em dir} & is an array of chars which contains directory\\
+{\em dir} & is an array of chars which contains directory \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case given directory exists 
+
+false in case given directory doesn\textquotesingle{}t exist
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
+Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
 
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a}\label{ini__parser_8cpp_ab8cfad0784f354878697c05ea745245a}} 
+\index{ini\_parser.cpp@{ini\_parser.cpp}!get\_dir@{get\_dir}}
+\index{get\_dir@{get\_dir}!ini\_parser.cpp@{ini\_parser.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_dir()}{get\_dir()}}
+{\footnotesize\ttfamily char $\ast$ get\+\_\+dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+function reads global path of .exe file and changes it to folder where .ini file is located \begin{DoxyReturn}{Returns}
+string with a global path to .ini file
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}\label{ini__parser_8cpp_ad888b7d22149211c49a67fafe27442fa}} 
 \index{ini\_parser.cpp@{ini\_parser.cpp}!ini\_read@{ini\_read}}
 \index{ini\_read@{ini\_read}!ini\_parser.cpp@{ini\_parser.cpp}}
 \doxysubsubsection{\texorpdfstring{ini\_read()}{ini\_read()}}
 {\footnotesize\ttfamily int ini\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-reads initialization file reads initialization file
+reads initialization file reads initialization file and output file from path in Initial\+\_\+file.\+ini \begin{DoxyReturn}{Returns}
+1 in case given directories in .ini file exist, if not returns 0
+\end{DoxyReturn}
 
-Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
 
+Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
 
 
 \doxysubsection{Variable Documentation}
@@ -55,5 +87,5 @@ Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00038}{38}} of file
 
 global variable of directories of input and output dir 
 
-Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
+Definition at line \mbox{\hyperlink{ini__parser_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{ini__parser_8cpp_source}{ini\+\_\+parser.\+cpp}}.
 

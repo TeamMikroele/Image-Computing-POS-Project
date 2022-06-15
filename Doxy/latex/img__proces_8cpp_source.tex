@@ -41,42 +41,42 @@
 \DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00063}00063 \}}
 \DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00064}00064 }
 \DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00065}\mbox{\hyperlink{img__proces_8cpp_a460b50e10053ab4e957b16eb60df2e3e}{00065}} \textcolor{keywordtype}{void} \mbox{\hyperlink{img__proces_8cpp_a460b50e10053ab4e957b16eb60df2e3e}{edge\_detecting}}(\textcolor{keywordtype}{int} img\_index) \{}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00070}00070     Mat tmp;}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00071}00071     cvtColor(\mbox{\hyperlink{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}{Image}}[img\_index], tmp, COLOR\_BGR2GRAY, 0);}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00072}00072     Laplacian(tmp, \mbox{\hyperlink{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}{Image}}[img\_index], CV\_16S, 5, 1, 0, 4);}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00073}00073 \}}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00074}00074 }
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00075}\mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{00075}} \textcolor{keywordtype}{void} \mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{thumbnails\_matrix}}(\textcolor{keywordtype}{string} file\_name, vector<Mat> ImagesToConcatanate)\{}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00081}00081     vector<Mat> CroppedImages;}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00082}00082     CroppedImages.resize(\mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size());}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00083}00083     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} img\_index = 0; img\_index < \mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size(); img\_index++) \{}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00084}00084         }
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00085}00085         CroppedImages[img\_index] = ImagesToConcatanate[img\_index](}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00086}00086             Rect(}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00087}00087                 ImagesToConcatanate[img\_index].size().width / 2 -\/ \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}}/2,}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00088}00088                 ImagesToConcatanate[img\_index].size().height / 2 -\/ \mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}}/2,}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00089}00089                 \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}},}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00090}00090                 \mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}}}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00091}00091             )}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00092}00092         );}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00093}00093     \}}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00094}00094     }
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00095}00095     \textcolor{keywordtype}{int} matrix\_side = ceil(sqrt((\textcolor{keywordtype}{float})\mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size()));}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00096}00096     \textcolor{comment}{// Get dimension of final image}}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00097}00097     \textcolor{keywordtype}{int} rows = \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}} * matrix\_side;}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00098}00098     \textcolor{keywordtype}{int} cols = \mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}} * matrix\_side;}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00099}00099 }
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00100}00100     \textcolor{comment}{// Create a black image}}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00101}00101     Mat res = cv::Mat::zeros(cv::Size(rows, cols), CV\_64F);}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00102}00102 }
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00103}00103     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < matrix\_side; i++) \{}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00104}00104         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; (j < matrix\_side) and (j + matrix\_side * i < \mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size()); j++) \{}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00105}00105 }
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00106}00106             CroppedImages[j + matrix\_side*i].copyTo(res(Rect(\mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}}*j, \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}}*i, CroppedImages[j + matrix\_side * i].cols, CroppedImages[j + matrix\_side * i].rows)));}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00107}00107         \}}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00108}00108     \}}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00109}00109     \textcolor{keywordtype}{string} fileName = \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_adc4ecf23b1215d4e65058f2174443355}{output}} + file\_name + \textcolor{stringliteral}{"{}.png"{}};}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00110}00110     imwrite(fileName, res);}
-\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00111}00111 \}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00071}00071     Mat tmp;}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00072}00072     cvtColor(\mbox{\hyperlink{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}{Image}}[img\_index], tmp, COLOR\_BGR2GRAY, 0);}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00073}00073     Laplacian(tmp, \mbox{\hyperlink{img__proces_8cpp_a2147c4bd2997d8faf67e2152bda096e0}{Image}}[img\_index], CV\_16S, 5, 1, 0, 4);}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00074}00074 \}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00076}\mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{00076}} \textcolor{keywordtype}{void} \mbox{\hyperlink{img__proces_8cpp_ae74c141a050d22ccda7686c4ac762459}{thumbnails\_matrix}}(\textcolor{keywordtype}{string} file\_name, vector<Mat> ImagesToConcatanate)\{}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00082}00082     vector<Mat> CroppedImages;}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00083}00083     CroppedImages.resize(\mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size());}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00084}00084     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} img\_index = 0; img\_index < \mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size(); img\_index++) \{}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00085}00085         }
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00086}00086         CroppedImages[img\_index] = ImagesToConcatanate[img\_index](}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00087}00087             Rect(}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00088}00088                 ImagesToConcatanate[img\_index].size().width / 2 -\/ \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}}/2,}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00089}00089                 ImagesToConcatanate[img\_index].size().height / 2 -\/ \mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}}/2,}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00090}00090                 \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}},}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00091}00091                 \mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00092}00092             )}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00093}00093         );}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00095}00095     }
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00096}00096     \textcolor{keywordtype}{int} matrix\_side = ceil(sqrt((\textcolor{keywordtype}{float})\mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size()));}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00097}00097     \textcolor{comment}{// Get dimension of final image}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00098}00098     \textcolor{keywordtype}{int} rows = \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}} * matrix\_side;}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00099}00099     \textcolor{keywordtype}{int} cols = \mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}} * matrix\_side;}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00101}00101     \textcolor{comment}{// Create a black image}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00102}00102     Mat res = cv::Mat::zeros(cv::Size(rows, cols), CV\_64F);}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00104}00104     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < matrix\_side; i++) \{}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00105}00105         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; (j < matrix\_side) and (j + matrix\_side * i < \mbox{\hyperlink{img__proces_8cpp_a8b27c6453fd218934f16849136640d50}{filenames}}.size()); j++) \{}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00107}00107             CroppedImages[j + matrix\_side*i].copyTo(res(Rect(\mbox{\hyperlink{img__proces_8cpp_abfdc2552f8ab882b4380b2a56cdff54f}{COLS}}*j, \mbox{\hyperlink{img__proces_8cpp_a821282c3fbd7714d8302538a5a674885}{ROWS}}*i, CroppedImages[j + matrix\_side * i].cols, CroppedImages[j + matrix\_side * i].rows)));}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00109}00109     \}}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00110}00110     \textcolor{keywordtype}{string} fileName = \mbox{\hyperlink{ini__parser_8cpp_a74ec717e71ce698e43164095d548ef05}{dir\_img}}.\mbox{\hyperlink{structdir_adc4ecf23b1215d4e65058f2174443355}{output}} + file\_name + \textcolor{stringliteral}{"{}.png"{}};}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00111}00111     imwrite(fileName, res);}
+\DoxyCodeLine{\Hypertarget{img__proces_8cpp_source_l00112}00112 \}}
 
 \end{DoxyCode}

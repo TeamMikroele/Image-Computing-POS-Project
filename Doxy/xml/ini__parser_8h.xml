@@ -43,7 +43,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Image-Computing-POS-Project/ini_parser.h" line="9" column="17" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="12" bodyend="-1" declfile="Image-Computing-POS-Project/ini_parser.h" declline="9" declcolumn="17"/>
+        <location file="Image-Computing-POS-Project/ini_parser.h" line="9" column="17" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="10" bodyend="-1" declfile="Image-Computing-POS-Project/ini_parser.h" declline="9" declcolumn="17"/>
+        <referencedby refid="img__proces_8cpp_1a63417198c529b960ec8a21eaa9d256c3" compoundref="img__proces_8cpp" startline="56" endline="63">img_write</referencedby>
+        <referencedby refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" compoundref="ini__parser_8cpp" startline="61" endline="73">ini_read</referencedby>
+        <referencedby refid="img__proces_8cpp_1aa2dfd97634c85a8aa41a3c43f7a42ff8" compoundref="img__proces_8cpp" startline="34" endline="45">read_input_folder_info</referencedby>
+        <referencedby refid="img__proces_8cpp_1ae74c141a050d22ccda7686c4ac762459" compoundref="img__proces_8cpp" startline="76" endline="112">thumbnails_matrix</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -58,9 +62,17 @@
 <para>reads initialization file </para>
         </detaileddescription>
         <inbodydescription>
-<para>reads initialization file</para>
+<para>reads initialization file and output file from path in Initial_file.ini <simplesect kind="return"><para>1 in case given directories in .ini file exist, if not returns 0</para>
+</simplesect>
+</para>
         </inbodydescription>
-        <location file="Image-Computing-POS-Project/ini_parser.h" line="13" column="5" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="38" bodyend="49" declfile="Image-Computing-POS-Project/ini_parser.h" declline="13" declcolumn="5"/>
+        <location file="Image-Computing-POS-Project/ini_parser.h" line="13" column="5" bodyfile="Image-Computing-POS-Project/ini_parser.cpp" bodystart="61" bodyend="73" declfile="Image-Computing-POS-Project/ini_parser.h" declline="13" declcolumn="5"/>
+        <references refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" compoundref="ini__parser_8cpp" startline="36" endline="59">check_dir</references>
+        <references refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" compoundref="ini__parser_8cpp" startline="10">dir_img</references>
+        <references refid="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" compoundref="ini__parser_8cpp" startline="12" endline="34">get_dir</references>
+        <references refid="structdir_1ab5504a60475dcc29bbb3dbc30185b215" compoundref="ini__parser_8h" startline="6">dir::input</references>
+        <references refid="structdir_1adc4ecf23b1215d4e65058f2174443355" compoundref="ini__parser_8h" startline="7">dir::output</references>
+        <referencedby refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_main_8cpp" startline="10" endline="38">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

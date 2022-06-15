@@ -31,6 +31,7 @@
   </compound>
   <compound refid="ini__parser_8cpp" kind="file"><name>ini_parser.cpp</name>
     <member refid="ini__parser_8cpp_1a74ec717e71ce698e43164095d548ef05" kind="variable"><name>dir_img</name></member>
+    <member refid="ini__parser_8cpp_1ab8cfad0784f354878697c05ea745245a" kind="function"><name>get_dir</name></member>
     <member refid="ini__parser_8cpp_1ab394e2c29636a1b9ed0ea35a4ea4e387" kind="function"><name>check_dir</name></member>
     <member refid="ini__parser_8cpp_1ad888b7d22149211c49a67fafe27442fa" kind="function"><name>ini_read</name></member>
   </compound>
